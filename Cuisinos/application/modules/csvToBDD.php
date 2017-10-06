@@ -16,23 +16,37 @@
 		while(!feof($fp)) {
 			$liste = fgetcsv($fp, 2000, ",");
 			//$table = filter_input(INPUT_POST, 'userfile');
-			$liste[0] = (isset($liste[0])) ? $liste[0] : NULL;
-			$liste[1] = (isset($liste[1])) ? $liste[1] : NULL;
-			$liste[2] = (isset($liste[2])) ? $liste[2] : NULL;
-			$liste[3] = (isset($liste[3])) ? $liste[3] : NULL;
-			$liste[4] = (isset($liste[4])) ? $liste[4] : NULL;
-			$liste[5] = (isset($liste[5])) ? $liste[5] : NULL;
+			$liste[0]  = (isset($liste[0]))  ? $liste[0]  : NULL;
+			$liste[1]  = (isset($liste[1]))  ? $liste[1]  : NULL;
+			$liste[2]  = (isset($liste[2]))  ? $liste[2]  : NULL;
+			$liste[3]  = (isset($liste[3]))  ? $liste[3]  : NULL;
+			$liste[4]  = (isset($liste[4]))  ? $liste[4]  : NULL;
+			$liste[5]  = (isset($liste[5]))  ? $liste[5]  : NULL;
+			$liste[6]  = (isset($liste[6]))  ? $liste[6]  : NULL;
+			$liste[7]  = (isset($liste[7]))  ? $liste[7]  : NULL;
+			$liste[8]  = (isset($liste[8]))  ? $liste[8]  : NULL;
+			$liste[9]  = (isset($liste[9]))  ? $liste[9]  : NULL;
+			$liste[10] = (isset($liste[10])) ? $liste[10] : NULL;
+			$liste[11] = (isset($liste[11])) ? $liste[11] : NULL;
+			$liste[12] = (isset($liste[12])) ? $liste[12] : NULL;
 			$champ0 = $liste[0];
 			$champ1 = $liste[1];
 			$champ2 = $liste[2];
 			$champ3 = $liste[3];
 			$champ4 = $liste[4];
 			$champ5 = $liste[5];
+			$champ6 = $liste[6];
+			$champ7 = $liste[7];
+			$champ8 = $liste[8];
+			$champ9 = $liste[9];
+			$champ10 = $liste[10];
+			$champ11 = $liste[11];
+			$champ12 = $liste[12];
 			if($champ0 != '') {
 				$cpt++;
 				try {
-					$PDO_BDD -> exec("INSERT INTO t_personnes(ID_PERSONNES, PRENOM_PERSONNES, NOM_PERSONNES, MAIL_PERSONNES, GENRE_PERSONNES, PROFESSION_PERSONNES)
-									  VALUES('".$champ0."', '".$champ1."', '".$champ2."', '".$champ3."', '".$champ4."', '".$champ5."')");
+					$PDO_BDD -> exec("INSERT INTO t_recette_rct(RCT_ID, RCT_DATE, RCT_TITRE, RCT_DESCRIPTION, RCT_TEMPS_PREPARATION, RCT_TEMPS_CUISSON, RCT_TEMPS_REPOS, RCT_DIFFICULTE, RCT_COUT, RCT_STATUT, RCT_ILLUSTRATION, UTI_ID, RCT_NBPERSONNE)
+									  VALUES('".$champ0."', '".$champ1."', '".$champ2."', '".$champ3."', '".$champ4."', '".$champ5."', '".$champ6."', '".$champ7."', '".$champ8."', '".$champ9."', '".$champ10."', '".$champ11."', '".$champ12."')");
 				} catch (Exception $e) {
 					echo 'Erreur : '.$e -> getMessage().'</br>';
 					echo 'N° : '.$e -> getCode();
