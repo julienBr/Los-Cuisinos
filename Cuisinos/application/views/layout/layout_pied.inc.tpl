@@ -1,0 +1,1 @@
+<p>&copy; IUT de Provence, site Arles 2016</p>

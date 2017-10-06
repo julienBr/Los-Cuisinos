@@ -1,5 +1,5 @@
 
-CREATE DATABASE `recette` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE IF NOT EXISTS `recette` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 use `recette`;
 
 CREATE USER 'u_recette'@'localhost' IDENTIFIED BY 'SJzEeqLb2HHeNYVV';
