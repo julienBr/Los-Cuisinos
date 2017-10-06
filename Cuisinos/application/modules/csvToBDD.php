@@ -55,7 +55,7 @@
 			}
 		}
 		fclose($fp);
-		try {
+		/*try {
 			$annuaire['nbPersonnes']=$PDO_BDD->query('select count(ID_PERSONNES)
 													  from t_personnes')->fetch()[0];
 			$req=$PDO_BDD->prepare('select *
@@ -73,7 +73,7 @@
 			$annuaire['GENRE_PERSONNES'][$i]  = $lignes[4];
 			$annuaire['PROFESSION_PERSONNES'][$i] = $lignes[5];
 			$i++;
-		}
+		}*/
 		?>
 		<!DOCTYPE HTML>
 		<html lang="fr">
