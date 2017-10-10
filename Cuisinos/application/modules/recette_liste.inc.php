@@ -18,11 +18,11 @@
 			$data['RCT_ID'][$i]                = $lignes[0];
 			$data['RCT_TITRE'][$i]             = $lignes[2];
 			$data['RCT_DESCRIPTION'][$i]       = $lignes[3];
-			$data['RCT_STATUT'][$i]            = $lignes[9];
-			$data['RCT_ILLUSTRATION'][$i]      = $lignes[10];
-			$data['CAT_LABEL']                 = $lignes[16];
-			$data['CAT_DESCRIPTION']           = $lignes[17];
-			$data['UTI_LOGIN'][$i]             = $lignes[20];
+			$data['RCT_STATUT'][$i]            = $lignes[10];
+			$data['RCT_ILLUSTRATION'][$i]      = $lignes[11];
+			$data['CAT_LABEL']                 = $lignes[17];
+			$data['CAT_DESCRIPTION']           = $lignes[18];
+			$data['UTI_LOGIN'][$i]             = $lignes[21];
 			$i++;
 		}
 		try {
