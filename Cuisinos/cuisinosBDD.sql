@@ -105,13 +105,14 @@ CREATE TABLE  TJ_CAT_RCT (
 -- Table des ingrédients
 -- DROP TABLE IF EXISTS T_INGREDIENT_IGD;
 CREATE TABLE  T_INGREDIENT_IGD (
+  IGD_ID bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   IGD_LABEL varchar(255) NOT NULL,
   IGD_DESCRIPTION mediumtext NOT NULL,
   IGD_ILLUSTRATION varchar(80) NULL DEFAULT NULL,
   IGD_VALIDE bool NOT NULL DEFAULT 0,
   UTI_ID bigint(20) unsigned NULL DEFAULT NULL,
-  PRIMARY KEY (IGD_LABEL),
-  KEY (IGD_LABEL)
+  PRIMARY KEY (IGD_ID),
+  KEY (IGD_ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 
@@ -120,10 +121,10 @@ CREATE TABLE  T_INGREDIENT_IGD (
 -- DROP TABLE IF EXISTS TJ_IGD_RCT_UNI;
 CREATE TABLE  TJ_IGD_RCT_UNI (
   RCT_ID bigint(20) unsigned NOT NULL,
-  IGD_LABEL varchar(255)  NOT NULL,
+  IGD_ID bigint(20) unsigned NOT NULL,
   UNI_LABEL varchar(30) NOT NULL,
   IGD_RCT_UNI_QUANTITE int(11) NOT NULL,      
-  PRIMARY KEY (RCT_ID, IGD_LABEL, UNI_LABEL)
+  PRIMARY KEY (RCT_ID, IGD_ID, UNI_LABEL)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
 
@@ -157,7 +158,7 @@ ALTER TABLE T_COMMENTAIRE_COM
 
 ALTER TABLE TJ_IGD_RCT_UNI
  ADD CONSTRAINT C_FK_RCT_IGD_RCT_UNI FOREIGN KEY (RCT_ID) REFERENCES T_RECETTE_RCT (RCT_ID) ,
- ADD CONSTRAINT C_FK_IGD_IGD_RCT_UNI FOREIGN KEY (IGD_LABEL) REFERENCES T_INGREDIENT_IGD(IGD_LABEL), 
+ ADD CONSTRAINT C_FK_IGD_IGD_RCT_UNI FOREIGN KEY (IGD_ID) REFERENCES T_INGREDIENT_IGD(IGD_IG), 
  ADD CONSTRAINT C_FK_UNI_IGD_RCT_UNI FOREIGN KEY (UNI_LABEL) REFERENCES T_UNITE_UNI (UNI_LABEL) ;
 
 ALTER TABLE T_INGREDIENT_IGD
@@ -165,4 +166,96 @@ ALTER TABLE T_INGREDIENT_IGD
 
 ALTER TABLE T_RECETTE_RCT
  ADD CONSTRAINT C_FK_UTI_RCT FOREIGN KEY (UTI_ID) REFERENCES T_UTILISATEUR_UTI (UTI_ID) ;
-  
+
+
+-- données de la table t_utilisateur_uti
+INSERT INTO t_utilisateur_uti (UTI_LOGIN, UTI_MAIL, UTI_NOM, UTI_PRENOM, UTI_PASS, UTI_ADMIN, UTI_AVATAR) VALUEs
+('julienB', 'julien.bringard@outlook.fr', 'Bringard', 'Julien', SHA1('clownier13'), 1, NULL),
+('alexisD', 'alexis.ducreux@outlook.fr', 'Ducreux', 'Alexis', SHA1('ducreux13310'), 1, NULL),
+('compteTest', 'compte.test@outlook.fr', 'Test', 'Compte', SHA1('be9f885cd90fb66095a23e329113af8493c80666'), 0, NULL)
+
+-- données de la table t_unite_uni
+INSERT INTO t_unite_uni () VALUEs
+('Cuillère à soupe', 'cas', NULL, 1, 1),
+('Cuillère à café', 'cac', NULL, 1, 1),
+('Gramme', 'g', NULL, 1, 1),
+('Kilogramme', 'Kg', NULL, 1, 2),
+('Gramme', 'g', NULL, 1, 2),
+('Cuillère à soupe', 'cas', NULL, 1, 2),
+('Cuillère à café', 'cac', NULL, 1, 2),
+('Centilitre', 'cl', NULL, 1, 2),
+(Gramme  g NULL  1 3),
+(Centilitre  cl  NULL  1 3),
+(Cuillère à soupe  cas NULL  1 3)
+
+-- données de la table t_recette_rct
+
+-- données de la table t_categorie_cat
+
+-- données de la table tj_cat_rct
+
+-- données de la table t_ingredient_igd
+INSERT INTO t_ingredient_igd (IGD_LABEL, IGD_DESCRIPTION, IGD_ILLUSTRATION, IGD_VALIDE, UTI_ID) VALUES
+('galettes de tofu à l’indienne Tossolia', NULL, NULL, 1, 1),
+('melons à point', NULL, NULL, 1, 1),
+('soupe de coriandre ciselée', NULL, NULL, 1, 1),
+('citron vert', NULL, NULL, 1, 1),
+('huile d’olive', NULL, NULL, 1, 1),
+('fromage Bresse Bleu', NULL, NULL, 1, 1),
+('filet mignon de porc', NULL, NULL, 1, 1),
+('champignons de Paris', NULL, NULL, 1, 1),
+('persil plat ciselé', NULL, NULL, 1, 1),
+('Beurre', NULL, NULL, 1, 1),
+('Crème fraîche', NULL, NULL, 1, 1),
+('Sel', NULL, NULL, 1, 1),
+('Poivre', NULL, NULL, 1, 1),
+('pêches', NULL, NULL, 1, 1),
+('Miel', NULL, NULL, 1, 1),
+('Fleur d’oranger', NULL, NULL, 1, 1),
+('Betterave cuite', NULL, NULL, 1, 2),
+('Noisettes', NULL, NULL, 1, 2),
+('Huile d’olive à la truffe', NULL, NULL, 1, 2),
+('Vinaigre balsamique', NULL, NULL, 1, 2),
+('Moutarde', NULL, NULL, 1, 2),
+('Gousse d’ail', NULL, NULL, 1, 2),
+('Ciboulette', NULL, NULL, 1, 2),
+('Sel', NULL, NULL, 1, 2),
+('Poivre', NULL, NULL, 1, 2),
+('Gigot d’agneau', NULL, NULL, 1, 2),
+('Bière brune', NULL, NULL, 1, 2),
+('Oignons', NULL, NULL, 1, 2),
+('Beurre', NULL, NULL, 1, 2),
+('Farine', NULL, NULL, 1, 2),
+('Carottes', NULL, NULL, 1, 2),
+('Persil', NULL, NULL, 1, 2),
+('Bouquet garni', NULL, NULL, 1, 2),
+('Spéculoos', NULL, NULL, 1, 2),
+('Bouillon cube de viande', NULL, NULL, 1, 2),
+('Mascarpone', NULL, NULL, 1, 2),
+('Œufs', NULL, NULL, 1, 2),
+('Sucre', NULL, NULL, 1, 2),
+('Purée de pistache', NULL, NULL, 1, 2),
+('Sirop de grenadine', NULL, NULL, 1, 2),
+('Eau', NULL, NULL, 1, 2),
+('Biscuits à la cuillère', NULL, NULL, 1, 2),
+('Cerises dénoyautées', NULL, NULL, 1, 2),
+('Pistaches concassées', NULL, NULL, 1, 2),
+('crevettes', NULL, NULL, 1, 3),
+('Ricotta', NULL, NULL, 1, 3),
+('Cœurs d’artichaut', NULL, NULL, 1, 3),
+('Bouquet de ciboulette', NULL, NULL, 1, 3),
+('Sel', NULL, NULL, 1, 3),
+('Poivre', NULL, NULL, 1, 3),
+('champignons', NULL, NULL, 1, 3),
+('Oignons', NULL, NULL, 1, 3),
+('Escalopes de dindes', NULL, NULL, 1, 3),
+('Vin blanc', NULL, NULL, 1, 3),
+('Eau', NULL, NULL, 1, 3),
+('Huile d’olive', NULL, NULL, 1, 3),
+('perles du japon', NULL, NULL, 1, 3),
+('Lait écrémé', NULL, NULL, 1, 3),
+('Lait de coco', NULL, NULL, 1, 3),
+('Sirop d’agave', NULL, NULL, 1, 3),
+('Framboises fraîches', NULL, NULL, 1, 3)
+
+-- données de la table tj_igd_rct_uni
