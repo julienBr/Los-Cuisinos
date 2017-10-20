@@ -1,9 +1,10 @@
 <?php
-define('DB_HOST', 'localhost');
+//SJzEeqLb2HHeNYVV
+define('DB_HOST', 'mysql-gullien.alwaysdata.net');
 define('DB_PORT', '3306');
-define('DB_DATABASE', 'recette');
-define('DB_USERNAME', 'u_recette');
-define('DB_PASSWORD', 'SJzEeqLb2HHeNYVV');
+define('DB_DATABASE', 'gullien_recette');
+define('DB_USERNAME', 'gullien');
+define('DB_PASSWORD', 'clownier13');
 
 try {
 	$PDO_BDD= new PDO('mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_DATABASE, DB_USERNAME, DB_PASSWORD);
