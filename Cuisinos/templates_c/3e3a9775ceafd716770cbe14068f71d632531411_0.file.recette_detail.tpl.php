@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-10 06:33:09
+/* Smarty version 3.1.30, created on 2017-11-10 14:34:05
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\recette_detail.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59dc69a583ff42_88776896',
+  'unifunc' => 'content_5a05b8dd5adea7_64284802',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3e3a9775ceafd716770cbe14068f71d632531411' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\recette_detail.tpl',
-      1 => 1507617119,
+      1 => 1510304078,
       2 => 'file',
     ),
   ),
@@ -21,19 +21,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_59dc69a583ff42_88776896 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a05b8dd5adea7_64284802 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_741359dc69a583c715_12588749', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_995a05b8dd5aa215_77061173', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_741359dc69a583c715_12588749 extends Smarty_Internal_Block
+class Block_995a05b8dd5aa215_77061173 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -81,10 +81,21 @@ $_smarty_tpl->tpl_vars['j'] = new Smarty_Variable(null, $_smarty_tpl->isRenderin
 if ($_smarty_tpl->tpl_vars['j']->total > 0) {
 for ($_smarty_tpl->tpl_vars['j']->value = 0, $_smarty_tpl->tpl_vars['j']->iteration = 1;$_smarty_tpl->tpl_vars['j']->iteration <= $_smarty_tpl->tpl_vars['j']->total;$_smarty_tpl->tpl_vars['j']->value += $_smarty_tpl->tpl_vars['j']->step, $_smarty_tpl->tpl_vars['j']->iteration++) {
 $_smarty_tpl->tpl_vars['j']->first = $_smarty_tpl->tpl_vars['j']->iteration == 1;$_smarty_tpl->tpl_vars['j']->last = $_smarty_tpl->tpl_vars['j']->iteration == $_smarty_tpl->tpl_vars['j']->total;?>
-								<li><?php echo $_smarty_tpl->tpl_vars['data']->value['IGD_RCT_UNI_QUANTITE'][$_smarty_tpl->tpl_vars['j']->value];?>
+								<?php if ($_smarty_tpl->tpl_vars['data']->value['UNI_SHORT_LABEL'][$_smarty_tpl->tpl_vars['j']->value] == NULL) {?>
+									<li><?php echo $_smarty_tpl->tpl_vars['data']->value['IGD_RCT_UNI_QUANTITE'][$_smarty_tpl->tpl_vars['j']->value];?>
  <?php echo $_smarty_tpl->tpl_vars['data']->value['UNI_SHORT_LABEL'][$_smarty_tpl->tpl_vars['j']->value];?>
  <?php echo $_smarty_tpl->tpl_vars['data']->value['IGD_LABEL'][$_smarty_tpl->tpl_vars['j']->value];?>
+</li>	
+								<?php } else { ?>
+									<li><?php echo $_smarty_tpl->tpl_vars['data']->value['IGD_RCT_UNI_QUANTITE'][$_smarty_tpl->tpl_vars['j']->value];?>
+ <?php echo $_smarty_tpl->tpl_vars['data']->value['UNI_SHORT_LABEL'][$_smarty_tpl->tpl_vars['j']->value];?>
+ de <?php echo $_smarty_tpl->tpl_vars['data']->value['IGD_LABEL'][$_smarty_tpl->tpl_vars['j']->value];?>
 </li>
+								<?php }?>
+								<!--<li><?php echo $_smarty_tpl->tpl_vars['data']->value['IGD_RCT_UNI_QUANTITE'][$_smarty_tpl->tpl_vars['j']->value];?>
+ <?php echo $_smarty_tpl->tpl_vars['data']->value['UNI_SHORT_LABEL'][$_smarty_tpl->tpl_vars['j']->value];?>
+ de <?php echo $_smarty_tpl->tpl_vars['data']->value['IGD_LABEL'][$_smarty_tpl->tpl_vars['j']->value];?>
+</li>-->
 							<?php }
 }
 ?>

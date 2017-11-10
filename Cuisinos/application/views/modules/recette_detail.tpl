@@ -30,7 +30,12 @@
 					<h2>Ingrédients :</h2>
 						<ul>
 							{for $j=0 to $data['nbIngredient']-1}
-								<li>{$data['IGD_RCT_UNI_QUANTITE'][$j]} {$data['UNI_SHORT_LABEL'][$j]} {$data['IGD_LABEL'][$j]}</li>
+								{if $data['UNI_SHORT_LABEL'][$j] == NULL}
+									<li>{$data['IGD_RCT_UNI_QUANTITE'][$j]} {$data['UNI_SHORT_LABEL'][$j]} {$data['IGD_LABEL'][$j]}</li>	
+								{else}
+									<li>{$data['IGD_RCT_UNI_QUANTITE'][$j]} {$data['UNI_SHORT_LABEL'][$j]} de {$data['IGD_LABEL'][$j]}</li>
+								{/if}
+								<!--<li>{$data['IGD_RCT_UNI_QUANTITE'][$j]} {$data['UNI_SHORT_LABEL'][$j]} de {$data['IGD_LABEL'][$j]}</li>-->
 							{/for}
 						</ul>
 					<div class="articleBorder col-lg-offset-2 col-lg-8">
