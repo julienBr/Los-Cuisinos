@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 20 Octobre 2017 à 11:54
+-- Généré le :  Ven 10 Novembre 2017 à 08:25
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -56,8 +56,80 @@ CREATE TABLE `tj_igd_rct_uni` (
   `RCT_ID` bigint(20) UNSIGNED NOT NULL,
   `IGD_ID` bigint(20) UNSIGNED NOT NULL,
   `UNI_ID` varchar(30) NOT NULL,
-  `IGD_RCT_UNI_QUANTITE` int(11) NOT NULL
+  `IGD_RCT_UNI_QUANTITE` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `tj_igd_rct_uni`
+--
+
+INSERT INTO `tj_igd_rct_uni` (`RCT_ID`, `IGD_ID`, `UNI_ID`, `IGD_RCT_UNI_QUANTITE`) VALUES
+(3, 1, '12', '2 à 4'),
+(3, 2, '12', '2'),
+(3, 3, '12', '1'),
+(3, 4, '1', '2'),
+(3, 5, '2', '2'),
+(4, 6, '3', '250'),
+(4, 7, '3', '600'),
+(4, 8, '3', '600'),
+(4, 9, '1', '2'),
+(4, 10, '3', '100'),
+(4, 11, '1', '2'),
+(4, 12, '12', NULL),
+(4, 13, '12', NULL),
+(5, 14, '12', '4'),
+(5, 15, '1', '3'),
+(5, 16, '1', '2'),
+(6, 17, '5', '150'),
+(6, 18, '13', '1 grosse poignée'),
+(6, 19, '6', '3'),
+(6, 20, '6', '1'),
+(6, 21, '7', '1'),
+(6, 22, '13', '1'),
+(6, 23, '13', NULL),
+(6, 24, '13', NULL),
+(6, 25, '13', NULL),
+(7, 21, '6', '1 à 2'),
+(7, 24, '13', NULL),
+(7, 25, '13', NULL),
+(7, 26, '4', '1'),
+(7, 27, '8', '33'),
+(7, 28, '13', '2'),
+(7, 29, '5', '50'),
+(7, 30, '6', '1'),
+(7, 31, '13', '2'),
+(7, 32, '13', '1'),
+(7, 33, '13', '1'),
+(7, 34, '5', '50'),
+(7, 35, '13', '1'),
+(8, 36, '5', '125'),
+(8, 37, '13', '2'),
+(8, 38, '5', '30'),
+(8, 39, '5', '20'),
+(8, 40, '6', '3'),
+(8, 41, '8', '20'),
+(8, 42, '13', '10 à 15'),
+(8, 43, '13', '30'),
+(8, 44, '5', '10'),
+(9, 45, '9', '100'),
+(9, 46, '9', '250'),
+(9, 47, '14', '6'),
+(9, 48, '14', 'un petit bouquet'),
+(9, 49, '14', NULL),
+(9, 50, '14', NULL),
+(10, 49, '14', NULL),
+(10, 50, '14', NULL),
+(10, 51, '9', '400'),
+(10, 52, '14', '2'),
+(10, 53, '14', '4'),
+(10, 54, '10', '12'),
+(10, 55, '10', '12'),
+(10, 56, '14', NULL),
+(11, 57, '9', '40'),
+(11, 58, '10', '15'),
+(11, 59, '10', '40'),
+(11, 60, '11', '1'),
+(11, 61, '9', '150');
 
 -- --------------------------------------------------------
 
@@ -206,14 +278,14 @@ CREATE TABLE `t_recette_rct` (
 
 INSERT INTO `t_recette_rct` (`RCT_ID`, `RCT_DATE`, `RCT_TITRE`, `RCT_DESCRIPTION`, `RCT_PREPARATION`, `RCT_TEMPS_PREPARATION`, `RCT_TEMPS_CUISSON`, `RCT_TEMPS_REPOS`, `RCT_DIFFICULTE`, `RCT_COUT`, `RCT_STATUT`, `RCT_ILLUSTRATION`, `UTI_ID`, `RCT_NBPERSONNE`) VALUES
 (3, '2017-10-05 22:00:00', 'Soupe de melon glacée à la coriandre, topping galettes au tofu à l’indienne', 'Voici une jolie recette qui nous permet de nous régaler avec les derniers melons de la saison.', '1. Coupez les melons en deux, prélevez la chair puis mixez-la avec le jus de citron ainsi qu’une pincée de sel et de poivre. Vous pouvez rajouter un peu d’eau dans le blender pour rectifier la consistance. Pensez à conserver les écorces pour le dressage.\r\n2. Une fois la consistance onctueuse et homogène obtenue, ajoutez la coriandre puis mixez à nouveau.\r\n3. Réfrigérez pour deux heures au minimum. Dressez ensuite la soupe glacée dans des bols ou dans les écorces de melon. Emiettez les galettes de tofu, puis faites-les dorer dans une poêle huilée quelques minutes. Parsemez cette préparation sur les soupes de melon. Dégustez aussitôt.', '00:20:00', NULL, '02:00:00', 'facile', 'faible', 'finale', 'soupeMelon.png', 1, 6),
-(4, '2017-10-05 22:00:00', 'Filet mignon de porc rôti au Bresse Bleu, façon Orloff', 'La recette traditionnelle du rôti orloff est un rôti de veau garni de tranches de bacon et de gruyère. Les cuisiniers de Bresse bleu revisite cette recette en insérant des tranches de fromage bleu de Bresse avec la duxelles de champignons. Absolument gourmand !', '1. Dans une sauteuse, faites colorer le filet mignon avec 20 g de beurre, sel et poivre. Faites cuire 10 min en retournant régulièrement, puis laissez refroidir.\r\n2. Emincez la moitié des champignons en lamelles, réservez. Hachez l’autre moitié au couteau, faites de même avec les échalotes.\r\n3. Faites suer les échalotes 3 min dans une casserole avec 50 g de beurre sur feu moyen, ajoutez ensuite les champignons hachés, sel et poivre. Laissez cuire encore 15 minutes en remuant régulièrement, vous obtiendrez une préparation presque sèche, une duxelles.\r\n4. Hors du feu ajoutez le persil et la moitié du Bresse Bleu en dés. Mélangez bien et laissez refroidir.\r\n5. Dans une poêle faites sauter les lamelles de champignons avec 30 g de beurre jusqu’à ce quelles soient dorées.\r\n6. Placez-les au fond d’un petit plat à four.\r\n7. Coupez le restant de Bresse Bleu en lamelles, environ 10.\r\n8. Préchauffez le four à 150°C (th.5).\r\n9. Découpez le filet mignon en 8 tranches. Entre chaque tranche mettez une lamelle de Bresse Bleu et une portion de duxelles puis reformez le filet mignon. Déposez dans le plat à four, nappez de crème fraiche puis mettez le reste de tranches de Bresse Bleu.\r\n10. Mettez au four pour 5 à 10 minutes le rôti doit être doré.', '00:25:00', '00:30:00', NULL, 'facile', 'faible', 'brouillon', 'filetMignon.png', 1, 6),
-(5, '2017-10-05 22:00:00', 'Salade de pêches à la fleur d’oranger', 'C’est parfois simple de se régaler : cette salade de fruits très facile à faire sera délicieuse grâce à l’ajout d’eau de fleur d’oranger. Elle va à merveille avec le goût des pêches et apporte le petit plus de la recette. En plus, manger des fruits crus est très bon pour le corps car ils sont riches en vitamines, anti-oxydants et minéraux. Pour une version vegan, remplacez le miel par du sirop d’agave.', '1. Coupez les pêches en fines tranches.\r\n2. Dans une poêle, faites chauffer le miel et l’eau de fleur d’oranger avec 2 cuillères à soupe d’eau.\r\n3. Ajoutez les pêches et laissez-les cuire 3 min pour qu’elles deviennent fondantes.\r\n4. Réservez 30 min au frais avant de servir.\r\n\r\nMon conseil : ajoutez des lamelles d’abricots et saupoudrez de pistaches finement mixées.', '00:10:00', '00:05:00', '00:30:00', 'facile', 'faible', 'brouillon', 'saladePeche.png', 1, 4),
-(6, '2017-10-05 22:00:00', 'Mousse de betterave aux noisettes', 'Voici de quoi bluffer vos invités, avec cette recette de mousse salée au bon goût de betterave, idéale pour l’apéritif.', '1. A l’aide d’un blender, mixez l’ensemble des ingrédients excepté les noisettes.\r\n2. Versez cette préparation dans des verrines.\r\n3. Concassez les noisettes, puis saupoudrez de noisettes concassées chaque verrine. Réservez au frais jusqu’au moment de servir.', '00:10:00', NULL, NULL, 'facile', 'faible', 'brouillon', 'mousseBetterave.png', 2, 2),
-(7, '2017-10-05 22:00:00', 'Cocotte d’agneau à la bière brune et aux spéculoos', 'Avec l’arrivée du printemps, vous allez bientôt pouvoir cuisiner de l’agneau. Voici une recette aux saveurs du Nord avec de la bière et des speculoos, façon carbonade flamande.', '1. Coupez l’agneau en cubes, puis faites chauffer dans une poêle le reste de beurre et faites-y colorer rapidement les morceau d’agneau sur feu vif, salez et poivrez puis sortez les morceaux d’agneau.\r\n2. Versez une peu de bière dans la poêle et grattez les sucs de cuisson de la viande.\r\n3. Faites chauffer une cocotte avec la moitié du beurre, hachez les oignons et faites les blondir sur feu doux à couvert quelques minutes.\r\n4. Saupoudrez les oignons avec la farine mélangez bien et versez 20 cl d’eau, mélangez puis ajoutez l’agneau, les sucs de cuisson, le reste de bière, la moutarde, le bouquet garni et le cube de bouillon émietté, couvrez et laissez mijoter 1 heure sur feu très doux.\r\n5. Coupez les carottes en grosses rondelles puis ajoutez les ainsi que les speculoos concassés, mélangez et prolongez la cuisson de 30 minutes.\r\n6. La viande doit pouvoir se couper à la fourchette, si besoin poursuivez la cuisson, ajustez l’assaisonnement et servez parsemé de persil haché et accompagné d’une purée de pomme de terre ou de frites.', '00:25:00', '01:30:00', NULL, 'facile', 'faible', 'brouillon', 'cocotteAgneau.png', 2, 4),
-(8, '2017-10-05 22:00:00', 'Tiramisu pistaches cerises', 'La pâte de pistache est très parfumée et odorante. Elle permet de donner une douce saveur de pistaches à vos desserts comme dans ce tiramisu.', '1. Séparez les blancs des jaunes d’œufs.\r\n2. Dans un saladier, mélangez les jaunes d’œufs avec le sucre jusqu’à ce qu’ils blanchissent. Ajoutez la purée de pistache puis le mascarpone.\r\n3. Battez les blancs en neige ferme. Incorporez-les au mélange précédent.\r\n4. Versez le sirop et l’eau dans un bol. Trempez-y rapidement les biscuits à la cuillère un par un. Tapissez le fond des verrines avec les biscuits.\r\n5. Répartissez les cerises sur les biscuits.\r\n6. Répartissez la crème au mascarpone dans les verrines puis saupoudrez de pistaches concassées.\r\n7. Réservez au frais 2 h avant de servir.', '00:20:00', NULL, '02:00:00', 'facile', 'faible', 'brouillon', 'tiramisuPistachesCerises.png', 2, 6),
-(9, '2017-10-05 22:00:00', 'Fonds d’artichauts garnis aux crevettes et fromage frais', 'Une entrée fraîche et originale parfaite quand on ne veut allumer le four !', '1. Réservez 6 crevettes et coupez le reste en rondelles.\r\n2. Dans un bol, mélangez la ricotta, avec de la ciboulette ciselée, du sel et du poivre. A l’aide d’une fourchette ajoutez les crevettes et mélangez.\r\n3. Egouttez les fonds d’artichaut et remplissez-les avec la ricotta aux crevettes.\r\n4. Décorez avec les crevettes restantes, de la ciboulette et servez.', '00:15:00', NULL, NULL, 'facile', 'faible', 'brouillon', 'fondsArtichauts.png', 3, 6),
-(10, '2017-10-05 22:00:00', 'Ballotins de volaille, duxelles de champignons', 'Si vous cherchez une recette pas chère pour le repas de Noël, celle-ci sera parfaite ! Un filet de dinde, des champignons et une pointe de vin blanc suffisent à faire un plat festif et délicieux. Vous pouvez aussi le faire avec des escalopes de veau et des cèpes pour un plat encore plus festif.', '1. Coupez les oignons et les champignons en petits dés.\r\n2. Faites rissoler les oignons dans une poêle avec un filet d’huile d’olive, lorsqu’ils sont dorés ajoutez les champignons faites revenir puis couvrez et laissez cuire 5 minutes.\r\n3. Sur une planche à découper étalez les filets de dinde à l’aide d’un rouleau à pâtisserie, pour cela vous pouvez recouvrir le filet de dinde d’une feuille de film alimentaire.\r\n4. Etalez la duxelles sur les filets de dinde et roulez-les, entourez d’une ficelle de cuisine.\r\n5. Faites cuire les roulés de dinde dans une sauteuse avec un filet d’huile d’olive laissez cuire quelques minutes, puis retournez les roulés ajoutez le vin et l’eau, couvrez faites cuire 5 à 10 minutes à couvert à petit feu.\r\n6. Servez avec des pommes dauphines.', '00:30:00', '00:20:00', NULL, 'facile', 'faible', 'brouillon', 'ballotinVolaille.png', 3, 4),
-(11, '2017-10-05 22:00:00', 'Perles du Japon au lait de coco et framboises', 'A la différence du miel, le sirop d’Agave s’adapte parfaitement à une alimentation vegan. Il possède un pouvoir sucrant très élevé, ce qui permet d’en limiter sa quantité. On l’utilise de plus en plus en pâtisserie, comme dans cette recette par exemple.', '1. Portez à légère ébullition le lait et le lait de coco avec le Sirop d’Agave BIO Pure Via.\r\n2. Une fois chaud, versez les perles du Japon dans la casserole et faites cuire à feu doux pendant 20 minutes environ, jusqu’à épaississement du mélange. Les perles deviennent translucides lorsqu’elles sont cuites.\r\n3. Hors du feu, ajoutez les framboises. Garnissez de jolis bols ou verrines de cette préparation et réfrigérez pour 3 heures. Dégustez bien frais.', '00:15:00', NULL, NULL, 'facile', 'faible', 'brouillon', 'perlesJapon.png', 3, 2);
+(4, '2017-10-05 22:00:00', 'Filet mignon de porc rôti au Bresse Bleu, façon Orloff', 'La recette traditionnelle du rôti orloff est un rôti de veau garni de tranches de bacon et de gruyère. Les cuisiniers de Bresse bleu revisite cette recette en insérant des tranches de fromage bleu de Bresse avec la duxelles de champignons. Absolument gourmand !', '1. Dans une sauteuse, faites colorer le filet mignon avec 20 g de beurre, sel et poivre. Faites cuire 10 min en retournant régulièrement, puis laissez refroidir.\r\n2. Emincez la moitié des champignons en lamelles, réservez. Hachez l’autre moitié au couteau, faites de même avec les échalotes.\r\n3. Faites suer les échalotes 3 min dans une casserole avec 50 g de beurre sur feu moyen, ajoutez ensuite les champignons hachés, sel et poivre. Laissez cuire encore 15 minutes en remuant régulièrement, vous obtiendrez une préparation presque sèche, une duxelles.\r\n4. Hors du feu ajoutez le persil et la moitié du Bresse Bleu en dés. Mélangez bien et laissez refroidir.\r\n5. Dans une poêle faites sauter les lamelles de champignons avec 30 g de beurre jusqu’à ce quelles soient dorées.\r\n6. Placez-les au fond d’un petit plat à four.\r\n7. Coupez le restant de Bresse Bleu en lamelles, environ 10.\r\n8. Préchauffez le four à 150°C (th.5).\r\n9. Découpez le filet mignon en 8 tranches. Entre chaque tranche mettez une lamelle de Bresse Bleu et une portion de duxelles puis reformez le filet mignon. Déposez dans le plat à four, nappez de crème fraiche puis mettez le reste de tranches de Bresse Bleu.\r\n10. Mettez au four pour 5 à 10 minutes le rôti doit être doré.', '00:25:00', '00:30:00', NULL, 'facile', 'faible', 'finale', 'filetMignon.png', 1, 6),
+(5, '2017-10-05 22:00:00', 'Salade de pêches à la fleur d’oranger', 'C’est parfois simple de se régaler : cette salade de fruits très facile à faire sera délicieuse grâce à l’ajout d’eau de fleur d’oranger. Elle va à merveille avec le goût des pêches et apporte le petit plus de la recette. En plus, manger des fruits crus est très bon pour le corps car ils sont riches en vitamines, anti-oxydants et minéraux. Pour une version vegan, remplacez le miel par du sirop d’agave.', '1. Coupez les pêches en fines tranches.\r\n2. Dans une poêle, faites chauffer le miel et l’eau de fleur d’oranger avec 2 cuillères à soupe d’eau.\r\n3. Ajoutez les pêches et laissez-les cuire 3 min pour qu’elles deviennent fondantes.\r\n4. Réservez 30 min au frais avant de servir.\r\n\r\nMon conseil : ajoutez des lamelles d’abricots et saupoudrez de pistaches finement mixées.', '00:10:00', '00:05:00', '00:30:00', 'facile', 'faible', 'finale', 'saladePeche.png', 1, 4),
+(6, '2017-10-05 22:00:00', 'Mousse de betterave aux noisettes', 'Voici de quoi bluffer vos invités, avec cette recette de mousse salée au bon goût de betterave, idéale pour l’apéritif.', '1. A l’aide d’un blender, mixez l’ensemble des ingrédients excepté les noisettes.\r\n2. Versez cette préparation dans des verrines.\r\n3. Concassez les noisettes, puis saupoudrez de noisettes concassées chaque verrine. Réservez au frais jusqu’au moment de servir.', '00:10:00', NULL, NULL, 'facile', 'faible', 'finale', 'mousseBetterave.png', 2, 2),
+(7, '2017-10-05 22:00:00', 'Cocotte d’agneau à la bière brune et aux spéculoos', 'Avec l’arrivée du printemps, vous allez bientôt pouvoir cuisiner de l’agneau. Voici une recette aux saveurs du Nord avec de la bière et des speculoos, façon carbonade flamande.', '1. Coupez l’agneau en cubes, puis faites chauffer dans une poêle le reste de beurre et faites-y colorer rapidement les morceau d’agneau sur feu vif, salez et poivrez puis sortez les morceaux d’agneau.\r\n2. Versez une peu de bière dans la poêle et grattez les sucs de cuisson de la viande.\r\n3. Faites chauffer une cocotte avec la moitié du beurre, hachez les oignons et faites les blondir sur feu doux à couvert quelques minutes.\r\n4. Saupoudrez les oignons avec la farine mélangez bien et versez 20 cl d’eau, mélangez puis ajoutez l’agneau, les sucs de cuisson, le reste de bière, la moutarde, le bouquet garni et le cube de bouillon émietté, couvrez et laissez mijoter 1 heure sur feu très doux.\r\n5. Coupez les carottes en grosses rondelles puis ajoutez les ainsi que les speculoos concassés, mélangez et prolongez la cuisson de 30 minutes.\r\n6. La viande doit pouvoir se couper à la fourchette, si besoin poursuivez la cuisson, ajustez l’assaisonnement et servez parsemé de persil haché et accompagné d’une purée de pomme de terre ou de frites.', '00:25:00', '01:30:00', NULL, 'facile', 'faible', 'finale', 'cocotteAgneau.png', 2, 4),
+(8, '2017-10-05 22:00:00', 'Tiramisu pistaches cerises', 'La pâte de pistache est très parfumée et odorante. Elle permet de donner une douce saveur de pistaches à vos desserts comme dans ce tiramisu.', '1. Séparez les blancs des jaunes d’œufs.\r\n2. Dans un saladier, mélangez les jaunes d’œufs avec le sucre jusqu’à ce qu’ils blanchissent. Ajoutez la purée de pistache puis le mascarpone.\r\n3. Battez les blancs en neige ferme. Incorporez-les au mélange précédent.\r\n4. Versez le sirop et l’eau dans un bol. Trempez-y rapidement les biscuits à la cuillère un par un. Tapissez le fond des verrines avec les biscuits.\r\n5. Répartissez les cerises sur les biscuits.\r\n6. Répartissez la crème au mascarpone dans les verrines puis saupoudrez de pistaches concassées.\r\n7. Réservez au frais 2 h avant de servir.', '00:20:00', NULL, '02:00:00', 'facile', 'faible', 'finale', 'tiramisuPistachesCerises.png', 2, 6),
+(9, '2017-10-05 22:00:00', 'Fonds d’artichauts garnis aux crevettes et fromage frais', 'Une entrée fraîche et originale parfaite quand on ne veut allumer le four !', '1. Réservez 6 crevettes et coupez le reste en rondelles.\r\n2. Dans un bol, mélangez la ricotta, avec de la ciboulette ciselée, du sel et du poivre. A l’aide d’une fourchette ajoutez les crevettes et mélangez.\r\n3. Egouttez les fonds d’artichaut et remplissez-les avec la ricotta aux crevettes.\r\n4. Décorez avec les crevettes restantes, de la ciboulette et servez.', '00:15:00', NULL, NULL, 'facile', 'faible', 'finale', 'fondsArtichauts.png', 3, 6),
+(10, '2017-10-05 22:00:00', 'Ballotins de volaille, duxelles de champignons', 'Si vous cherchez une recette pas chère pour le repas de Noël, celle-ci sera parfaite ! Un filet de dinde, des champignons et une pointe de vin blanc suffisent à faire un plat festif et délicieux. Vous pouvez aussi le faire avec des escalopes de veau et des cèpes pour un plat encore plus festif.', '1. Coupez les oignons et les champignons en petits dés.\r\n2. Faites rissoler les oignons dans une poêle avec un filet d’huile d’olive, lorsqu’ils sont dorés ajoutez les champignons faites revenir puis couvrez et laissez cuire 5 minutes.\r\n3. Sur une planche à découper étalez les filets de dinde à l’aide d’un rouleau à pâtisserie, pour cela vous pouvez recouvrir le filet de dinde d’une feuille de film alimentaire.\r\n4. Etalez la duxelles sur les filets de dinde et roulez-les, entourez d’une ficelle de cuisine.\r\n5. Faites cuire les roulés de dinde dans une sauteuse avec un filet d’huile d’olive laissez cuire quelques minutes, puis retournez les roulés ajoutez le vin et l’eau, couvrez faites cuire 5 à 10 minutes à couvert à petit feu.\r\n6. Servez avec des pommes dauphines.', '00:30:00', '00:20:00', NULL, 'facile', 'faible', 'finale', 'ballotinVolaille.png', 3, 4),
+(11, '2017-10-05 22:00:00', 'Perles du Japon au lait de coco et framboises', 'A la différence du miel, le sirop d’Agave s’adapte parfaitement à une alimentation vegan. Il possède un pouvoir sucrant très élevé, ce qui permet d’en limiter sa quantité. On l’utilise de plus en plus en pâtisserie, comme dans cette recette par exemple.', '1. Portez à légère ébullition le lait et le lait de coco avec le Sirop d’Agave BIO Pure Via.\r\n2. Une fois chaud, versez les perles du Japon dans la casserole et faites cuire à feu doux pendant 20 minutes environ, jusqu’à épaississement du mélange. Les perles deviennent translucides lorsqu’elles sont cuites.\r\n3. Hors du feu, ajoutez les framboises. Garnissez de jolis bols ou verrines de cette préparation et réfrigérez pour 3 heures. Dégustez bien frais.', '00:15:00', NULL, NULL, 'facile', 'faible', 'finale', 'perlesJapon.png', 3, 2);
 
 -- --------------------------------------------------------
 
@@ -223,8 +295,8 @@ INSERT INTO `t_recette_rct` (`RCT_ID`, `RCT_DATE`, `RCT_TITRE`, `RCT_DESCRIPTION
 
 CREATE TABLE `t_unite_uni` (
   `UNI_ID` bigint(20) UNSIGNED NOT NULL,
-  `UNI_LABEL` varchar(30) NOT NULL,
-  `UNI_SHORT_LABEL` varchar(15) NOT NULL,
+  `UNI_LABEL` varchar(30) DEFAULT NULL,
+  `UNI_SHORT_LABEL` varchar(15) DEFAULT NULL,
   `UNI_DESCRIPTION` mediumtext,
   `UNI_VALIDE` tinyint(1) NOT NULL DEFAULT '0',
   `UTI_ID` bigint(20) UNSIGNED NOT NULL
@@ -245,7 +317,10 @@ INSERT INTO `t_unite_uni` (`UNI_ID`, `UNI_LABEL`, `UNI_SHORT_LABEL`, `UNI_DESCRI
 (8, 'Centilitre', 'cl', NULL, 1, 2),
 (9, 'Gramme', 'g', NULL, 1, 3),
 (10, 'Centilitre', 'cl', NULL, 1, 3),
-(11, 'Cuillère à soupe', 'cas', NULL, 1, 3);
+(11, 'Cuillère à soupe', 'cas', NULL, 1, 3),
+(12, NULL, NULL, NULL, 1, 1),
+(13, NULL, NULL, NULL, 1, 2),
+(14, NULL, NULL, NULL, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -364,7 +439,7 @@ ALTER TABLE `t_recette_rct`
 -- AUTO_INCREMENT pour la table `t_unite_uni`
 --
 ALTER TABLE `t_unite_uni`
-  MODIFY `UNI_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `UNI_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT pour la table `t_utilisateur_uti`
 --
