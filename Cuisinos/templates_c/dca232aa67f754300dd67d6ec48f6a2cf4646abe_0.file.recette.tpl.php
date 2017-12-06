@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-10 11:48:08
+/* Smarty version 3.1.30, created on 2017-12-06 15:40:30
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\recette.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59dcb37860e018_53347624',
+  'unifunc' => 'content_5a280f6e8469b6_67340098',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_59dcb37860e018_53347624 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a280f6e8469b6_67340098 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_image')) require_once 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\libraries\\smarty-3.1.30\\libs\\plugins\\function.html_image.php';
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
@@ -29,12 +29,12 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1906559dcb37860cad0_34104022', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_210365a280f6e845313_22515516', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_1906559dcb37860cad0_34104022 extends Smarty_Internal_Block
+class Block_210365a280f6e845313_22515516 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

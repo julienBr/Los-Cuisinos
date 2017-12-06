@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-10-03 09:45:49
+/* Smarty version 3.1.30, created on 2017-12-06 15:40:08
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\accueil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_59d35c4dbe3227_32851896',
+  'unifunc' => 'content_5a280f58f27a88_04274294',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:..\\layout.tpl' => 1,
   ),
 ),false)) {
-function content_59d35c4dbe3227_32851896 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a280f58f27a88_04274294 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2765559d35c4dbe1e23_80537070', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_149485a280f58f26618_80057882', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:..\layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_2765559d35c4dbe1e23_80537070 extends Smarty_Internal_Block
+class Block_149485a280f58f26618_80057882 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
