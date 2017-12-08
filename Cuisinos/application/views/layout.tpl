@@ -18,7 +18,6 @@
 	<header>
 		<div class="container-fluid">
 			<div class="row">
-				{include 'application/views/layout/layout_entete.inc.tpl'}
 				{include 'application/views/nav/nav.inc.tpl'}
 			</div>
 		</div>
