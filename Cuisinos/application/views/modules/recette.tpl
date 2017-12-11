@@ -1,18 +1,15 @@
 {extends file='../layout.tpl'}
-
 {block name=body}
-	<section>
-		<article>
-			<div class="row">
-				{foreach $data['recetteCat'] as $ligne}
-					<div class="articleRecette col-lg-4">
-						</br>
-						<h2 align="center">{$ligne['CAT_LABEL']}</h2>
-						<a href="index.php?page=recette_liste&idc={$ligne['CAT_ID']}"><img class="col-lg-12 img-responsive img-rounded" {html_image file="./media/categories/`$ligne.CAT_ILLUSTRATION`" width=300 height=200 }</a>
-						</br>
-					</div>
-				{/foreach}
+	<div class="row">
+		{foreach $data['recetteCat'] as $data}
+			<div class="col-sm card" style="width: 20rem;">
+				<p class="text-center"><img class="card-img-top-cat" src="./media/categories/{$data.CAT_ILLUSTRATION}" alt="Card image categories"></p>
+				<div class="card-body">
+					<h4 class="card-title">{$data.CAT_LABEL}</h4>
+					<p class="card-text"><i>{$data.CAT_DESCRIPTION}</i></p>
+					<a href="index.php?page=recette_liste&idc={$data['CAT_ID']}" class="btn-card btn btn-primary">Voir les recettes</a>
+				</div>
 			</div>
-		</article>
-	</section>
+		{/foreach}
+	</div>
 {/block}

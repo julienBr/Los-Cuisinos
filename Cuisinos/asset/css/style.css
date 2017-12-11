@@ -1,3 +1,7 @@
+html, header, body, footer {
+    color: #333333 !important;
+}
+
 .kv-avatar .krajee-default.file-preview-frame,.kv-avatar .krajee-default.file-preview-frame:hover {
     margin: 0;
     padding: 0;
@@ -19,4 +23,104 @@
     color: red;
     font-family: monospace;
     font-weight: normal;
+}
+
+.btn {
+    margin: 10px 0px !important;
+    color: #28a745 !important;
+    background-color: #f8f9fa !important;
+    border-color: #28a745 !important;
+}
+
+.btn:hover {
+    color: #f8f9fa !important;
+    background-color: #28a745 !important;
+    transition: all 0.15 linear;
+}
+
+.form-control {
+    color: #8a969f !important;
+    border: 1px solid #28a745 !important;
+}
+
+.accroche {
+    text-align: center;
+    border-bottom: 1px solid #8a969f;
+}
+
+.accroche p {
+    margin-bottom: 9px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 17px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.pFooter {
+    text-align: center;
+    border-top: 1px solid #8a969f;
+}
+
+.inputSearch {
+    height: 38px;
+    padding: 0px 4px !important;
+}
+
+.losCuisinos {
+    color: #333333;
+    position: relative;
+    top: 6px;
+}
+
+.fa-cutlery {
+    position: relative;
+    top: -2px;
+    font-size: 11px !important;
+}
+
+.icon {
+    position: relative;
+    top: 4px;
+}
+
+.card {
+    margin: 25px 20px 0px;
+}
+
+.card-rct {
+    height: 320px;
+}
+
+.card-img-top-cat {
+    width: 200px !important;
+    height: 200px;
+    margin-top: 15px;
+    border-radius: 10px !important;
+    border: 1px solid #8a969f;
+}
+
+.card-img-top-rct {
+    height: 150px;
+    padding: 0px 0px !important;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 15px !important;
+    border: 1px solid #8a969f;
+}
+
+.card-body-rct {
+    padding: 15px 0px 0px 15px !important;
+}
+
+.card-title {
+    margin-top: -26px;
+}
+
+.btn-card {
+    position: relative;
+    left: 61%;
 }

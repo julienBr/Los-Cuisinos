@@ -17,17 +17,13 @@
 
 	<header>
 		<div class="container-fluid">
-			<div class="row">
-				{include 'application/views/nav/nav.inc.tpl'}
-			</div>
+			{include 'application/views/nav/nav.inc.tpl'}
 		</div>
 	</header>
 
 	<body>
 		<div class="container-fluid">
-			<div class="row">
-				{block name=body}{/block}
-			</div>
+			{block name=body}{/block}
 		</div>
 		<script type="text/javascript" src="https://use.fontawesome.com/babf69eb57.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -39,11 +35,9 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/fileinput.min.js"></script>
 	</body>
 
-	<footer>
+	<footer class="footer">
 		<div class="container-fluid">
-			<div class="row">
-				{include 'application/views/layout/layout_pied.inc.tpl'}
-			</div>
+			<!--{include 'application/views/layout/layout_pied.inc.tpl'}-->
 		</div>
 	</footer>
 </html>
