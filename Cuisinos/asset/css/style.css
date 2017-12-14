@@ -2,6 +2,10 @@ html, header, body, footer {
     color: #333333 !important;
 }
 
+hr {
+    border-top: 1px solid #8a969f !important;
+}
+
 .kv-avatar .krajee-default.file-preview-frame,.kv-avatar .krajee-default.file-preview-frame:hover {
     margin: 0;
     padding: 0;
@@ -67,7 +71,11 @@ html, header, body, footer {
 
 .inputSearch {
     height: 38px;
-    padding: 0px 4px !important;
+    padding: 0px 5px !important;
+}
+
+.form-input {
+    padding: 0px 5px !important;
 }
 
 .losCuisinos {
@@ -123,4 +131,21 @@ html, header, body, footer {
 .btn-card {
     position: relative;
     left: 61%;
+}
+
+.form-vertical {
+    margin-top: 25px;
+}
+
+.btn-inscription {
+    position: relative;
+    top: 10px;
+}
+
+.input-group-addon {
+    color: #333333 !important;
+    background-color: #f8f9fa !important;
+    border-top: 1px solid #28a745 !important;
+    border-left: 1px solid #28a745 !important;
+    border-bottom: 1px solid #28a745 !important;
 }
