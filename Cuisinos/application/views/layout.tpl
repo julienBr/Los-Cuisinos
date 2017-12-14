@@ -45,7 +45,7 @@
 
 	<footer class="footer">
 		<div class="container-fluid">
-			<!--{include 'application/views/layout/layout_pied.inc.tpl'}-->
+			{include 'application/views/layout/layout_pied.inc.tpl'}
 		</div>
 	</footer>
 </html>

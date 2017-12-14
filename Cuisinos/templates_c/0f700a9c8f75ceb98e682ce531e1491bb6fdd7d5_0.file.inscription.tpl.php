@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-11 10:51:20
+/* Smarty version 3.1.30, created on 2017-12-14 17:22:42
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\inscription.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2e632817e660_52227116',
+  'unifunc' => 'content_5a32b3627d1412_42672715',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f700a9c8f75ceb98e682ce531e1491bb6fdd7d5' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\inscription.tpl',
-      1 => 1512989469,
+      1 => 1513272144,
       2 => 'file',
     ),
   ),
@@ -21,23 +21,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a2e632817e660_52227116 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a32b3627d1412_42672715 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_116005a2e632817d330_03831288', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_320615a32b3627cfa86_62779433', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_116005a2e632817d330_03831288 extends Smarty_Internal_Block
+class Block_320615a32b3627cfa86_62779433 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-	<form class="form form-vertical" action="application/modules/inscription.inc.php" method="post" enctype="multipart/form-data">
+	<form class="form form-vertical" method="post" enctype="multipart/form-data">
 		<div class="row">
 			<div class="col-sm-4 text-center">
 				<div class="kv-avatar">

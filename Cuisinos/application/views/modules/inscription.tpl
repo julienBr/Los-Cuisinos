@@ -1,6 +1,6 @@
 {extends file='../layout.tpl'}
 {block name=body}
-	<form class="form form-vertical" action="application/modules/inscription.inc.php" method="post" enctype="multipart/form-data">
+	<form class="form form-vertical" method="post" enctype="multipart/form-data">
 		<div class="row">
 			<div class="col-sm-4 text-center">
 				<div class="kv-avatar">
