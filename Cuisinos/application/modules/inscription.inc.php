@@ -31,7 +31,7 @@ if(isset($_REQUEST['submit'])) {
 				echo "<script>alert(\"Fichier non conforme. (conforme : .jgp, .jpeg, .png\")</script>";
 
 			// Récupération du nom de fichier
-			$name_file = $_FiLES['avatar']['name'];
+			$name_file = $_FILES['avatar']['name'];
 			// Vérifie la copie
 			if(!move_uploaded_file($file, $dir.$name_file))
 				echo "<script>alert(\"Impossible de copier le fichier dans $dir\")</script>";

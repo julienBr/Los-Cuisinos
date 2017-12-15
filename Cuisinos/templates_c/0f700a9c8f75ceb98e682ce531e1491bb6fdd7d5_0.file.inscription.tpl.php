@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 17:22:42
+/* Smarty version 3.1.30, created on 2017-12-14 18:53:40
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\inscription.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a32b3627d1412_42672715',
+  'unifunc' => 'content_5a32c8b4258529_50004808',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f700a9c8f75ceb98e682ce531e1491bb6fdd7d5' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\inscription.tpl',
-      1 => 1513272144,
+      1 => 1513277612,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a32b3627d1412_42672715 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a32c8b4258529_50004808 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_320615a32b3627cfa86_62779433', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_72125a32c8b4257171_29246407', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_320615a32b3627cfa86_62779433 extends Smarty_Internal_Block
+class Block_72125a32c8b4257171_29246407 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -42,7 +42,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 			<div class="col-sm-4 text-center">
 				<div class="kv-avatar">
 					<div class="file-loading">
-						<input id="avatar-1" name="avatar-1" type="file" required>
+						<input id="avatar-1" name="avatar" type="file" required>
 					</div>
 				</div>
 				<div class="kv-avatar-hint"><small>Selectionner un fichier < 1500 Ko</small></div>
@@ -126,7 +126,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 				<div class="form-group">
 					<hr>
 					<div class="text-right">
-						<button type="submit" class="btn-inscription btn btn-primary">Je m'inscris</button>
+						<button name="submit" type="submit" class="btn-inscription btn btn-primary">Je m'inscris</button>
 						<button type="reset" class="btn-inscription btn btn-primary">Effacer</button>
 					</div>
 				</div>

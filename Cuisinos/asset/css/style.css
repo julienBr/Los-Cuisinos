@@ -167,3 +167,11 @@ hr {
     border-left: 1px solid #28a745 !important;
     border-bottom: 1px solid #28a745 !important;
 }
+
+ul {
+    list-style: none;
+}
+
+.seConnecter {
+    border-radius: 0 .25rem .25rem 0 !important;
+}

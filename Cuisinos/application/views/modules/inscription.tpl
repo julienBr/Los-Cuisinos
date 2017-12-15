@@ -5,7 +5,7 @@
 			<div class="col-sm-4 text-center">
 				<div class="kv-avatar">
 					<div class="file-loading">
-						<input id="avatar-1" name="avatar-1" type="file" required>
+						<input id="avatar-1" name="avatar" type="file" required>
 					</div>
 				</div>
 				<div class="kv-avatar-hint"><small>Selectionner un fichier < 1500 Ko</small></div>
@@ -89,7 +89,7 @@
 				<div class="form-group">
 					<hr>
 					<div class="text-right">
-						<button type="submit" class="btn-inscription btn btn-primary">Je m'inscris</button>
+						<button name="submit" type="submit" class="btn-inscription btn btn-primary">Je m'inscris</button>
 						<button type="reset" class="btn-inscription btn btn-primary">Effacer</button>
 					</div>
 				</div>
