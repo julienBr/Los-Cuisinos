@@ -20,20 +20,21 @@
 							<ul id="login-dp" class="dropdown-menu">
 								<li>
 									<div class="divLogin row">
-										<div class="col-md-12">Login via
+										<div class="col-sm-12">
 											<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
 												<div class="form-group">
-													<label class="sr-only" for="exampleInputEmail2">Email address</label>
-													<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Adresse e-mail" required>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-user-secret fa" aria-hidden="true"></i></span>
+														<input type="text" class="form-input form-control" name="signInLogin" id="signInLogin" placeholder="Login" required>
+													</div>
 												</div>
 												<div class="form-group">
-													<label class="sr-only" for="exampleInputPassword2">Password</label>
-													<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Mot de passe" required>
-													<div class="help-block text-right"><a href="">Mot de passe oublié ?</a></div>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+														<input type="password" id="pwd" class="form-input form-control" name="signInPassword" placeholder="Mot de passe" required>
+													</div>
 												</div>
-												<div class="form-group">
-													<button type="submit" class="btn btn-primary btn-block">Sign in</button>
-												</div>
+												<button name="signIn" type="submit" class="btnSignIn btn btn-primary btn-block">Sign in</button>
 												<div class="checkbox">
 													<label><input type="checkbox"> Se souvenir de moi</label>
 												</div>

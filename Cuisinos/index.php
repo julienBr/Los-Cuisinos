@@ -12,6 +12,7 @@
 	else $current_page = HOME_PAGE;
 	
 	require_once "application/modules/recherches.inc.php";
+	require_once "application/modules/connexion.inc.php";
 	require_once "application/modules/$current_page.inc.php";
 	$smarty -> display('application/views/modules/'.$current_page.'.tpl');
 ?>

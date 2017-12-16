@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-15 09:42:18
+/* Smarty version 3.1.30, created on 2017-12-16 15:59:22
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\nav\nav.inc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3398fa9e4354_11064896',
+  'unifunc' => 'content_5a3542da12a3d6_63999693',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6cb71a69e8c2755cc3f4086a1fa82f931124d77e' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\nav\\nav.inc.tpl',
-      1 => 1513330887,
+      1 => 1513439960,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3398fa9e4354_11064896 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3542da12a3d6_63999693 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
 	<nav class="col-sm-12 navbar-light bg-light">
@@ -44,20 +44,21 @@ function content_5a3398fa9e4354_11064896 (Smarty_Internal_Template $_smarty_tpl)
 							<ul id="login-dp" class="dropdown-menu">
 								<li>
 									<div class="divLogin row">
-										<div class="col-md-12">Login via
+										<div class="col-sm-12">
 											<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
 												<div class="form-group">
-													<label class="sr-only" for="exampleInputEmail2">Email address</label>
-													<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Adresse e-mail" required>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-user-secret fa" aria-hidden="true"></i></span>
+														<input type="text" class="form-input form-control" name="signInLogin" id="signInLogin" placeholder="Login" required>
+													</div>
 												</div>
 												<div class="form-group">
-													<label class="sr-only" for="exampleInputPassword2">Password</label>
-													<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Mot de passe" required>
-													<div class="help-block text-right"><a href="">Mot de passe oublié ?</a></div>
+													<div class="input-group">
+														<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+														<input type="password" id="pwd" class="form-input form-control" name="signInPassword" placeholder="Mot de passe" required>
+													</div>
 												</div>
-												<div class="form-group">
-													<button type="submit" class="btn btn-primary btn-block">Sign in</button>
-												</div>
+												<button name="signIn" type="submit" class="btnSignIn btn btn-primary btn-block">Sign in</button>
 												<div class="checkbox">
 													<label><input type="checkbox"> Se souvenir de moi</label>
 												</div>
