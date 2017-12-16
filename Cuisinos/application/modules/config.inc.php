@@ -10,7 +10,6 @@
         'inscription'    => 'inscription',
         'connexion'      => 'connexion',
         'profil'         => 'profil',
-        'deconnexion'    => 'deconnexion',
         'gestion_recettes'=>'gestion_recettes',
         'gestion_utilisateurs'=>'gestion_utilisateurs',
         'gestion_ingredients'=>'gestion_ingredients',

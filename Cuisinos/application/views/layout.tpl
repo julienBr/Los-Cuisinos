@@ -25,7 +25,13 @@
 
 	<header>
 		<div class="container-fluid">
-			{include 'application/views/nav/nav.inc.tpl'}
+			{if isset($smarty.session.login) && ($smarty.session.type == 0)}
+				{include 'application/views/nav/nav_membre.inc.tpl'}
+			{elseif isset($smarty.session.login) && ($smarty.session.type == 1)}
+				{include 'application/views/nav/nav_membre.inc.tpl'}
+			{else}
+				{include 'application/views/nav/nav.inc.tpl'}
+			{/if}
 		</div>
 	</header>
 

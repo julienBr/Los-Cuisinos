@@ -16,12 +16,13 @@
 					</form>
 					<ul class="col-sm btn-group" role="group">
 						<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=inscription'"><i class="fa fa-user-circle-o"></i> S'inscrire</button>
-						<li class="dropdown"><a href="#" class="seConnecter btn btn-secondary" data-toggle="dropdown"><i class="fa fa-sign-in"></i> Se connecter</a>
+						<button type="submit" class="btn btn-secondary" name="signOut"><i class="fa fa-sign-out"></i> Se déconnecter</button>
+						<!--<li class="dropdown"><a href="#" class="seConnecter btn btn-secondary" data-toggle="dropdown"><i class="fa fa-sign-in"></i> Se connecter</a>
 							<ul id="login-dp" class="dropdown-menu">
 								<li>
 									<div class="divLogin row">
 										<div class="col-sm-12">
-											<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+											<form class="form" role="form" method="post" accept-charset="UTF-8" id="login-nav">
 												<div class="form-group">
 													<div class="input-group">
 														<span class="input-group-addon"><i class="fa fa-user-secret fa" aria-hidden="true"></i></span>
@@ -44,8 +45,7 @@
 									</div>
 								</li>
 							</ul>
-						</li>
-						<!--<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=connexion'"><i class="fa fa-sign-in"></i> Se connecter</button>-->
+						</li>-->
 					</ul>
 				</div>
 			</div>

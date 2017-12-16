@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-16 15:59:22
+/* Smarty version 3.1.30, created on 2017-12-16 16:43:41
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\nav\nav.inc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3542da12a3d6_63999693',
+  'unifunc' => 'content_5a354d3d2b13c6_82090372',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6cb71a69e8c2755cc3f4086a1fa82f931124d77e' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\nav\\nav.inc.tpl',
-      1 => 1513439960,
+      1 => 1513442598,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a3542da12a3d6_63999693 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a354d3d2b13c6_82090372 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
 	<nav class="col-sm-12 navbar-light bg-light">
@@ -40,12 +40,13 @@ function content_5a3542da12a3d6_63999693 (Smarty_Internal_Template $_smarty_tpl)
 					</form>
 					<ul class="col-sm btn-group" role="group">
 						<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=inscription'"><i class="fa fa-user-circle-o"></i> S'inscrire</button>
-						<li class="dropdown"><a href="#" class="seConnecter btn btn-secondary" data-toggle="dropdown"><i class="fa fa-sign-in"></i> Se connecter</a>
+						<button type="submit" class="btn btn-secondary" name="signOut"><i class="fa fa-sign-out"></i> Se déconnecter</button>
+						<!--<li class="dropdown"><a href="#" class="seConnecter btn btn-secondary" data-toggle="dropdown"><i class="fa fa-sign-in"></i> Se connecter</a>
 							<ul id="login-dp" class="dropdown-menu">
 								<li>
 									<div class="divLogin row">
 										<div class="col-sm-12">
-											<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+											<form class="form" role="form" method="post" accept-charset="UTF-8" id="login-nav">
 												<div class="form-group">
 													<div class="input-group">
 														<span class="input-group-addon"><i class="fa fa-user-secret fa" aria-hidden="true"></i></span>
@@ -68,8 +69,7 @@ function content_5a3542da12a3d6_63999693 (Smarty_Internal_Template $_smarty_tpl)
 									</div>
 								</li>
 							</ul>
-						</li>
-						<!--<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=connexion'"><i class="fa fa-sign-in"></i> Se connecter</button>-->
+						</li>-->
 					</ul>
 				</div>
 			</div>
