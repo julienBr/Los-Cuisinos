@@ -175,3 +175,12 @@ ul {
 .seConnecter {
     border-radius: 0 .25rem .25rem 0 !important;
 }
+
+.divLogin {
+    margin: 0 !important;
+    width: 250px;
+}
+
+.nouveauIci {
+    margin-bottom: 0;
+}

@@ -13,7 +13,8 @@
         'deconnexion'    => 'deconnexion',
         'gestion_recettes'=>'gestion_recettes',
         'gestion_utilisateurs'=>'gestion_utilisateurs',
-        'gestion_ingredients'=>'gestion_ingredients'
+        'gestion_ingredients'=>'gestion_ingredients',
+        'recherches' => 'recherches'
 	);
 	define('HOME_PAGE', 'accueil');
 	define('ERROR_404', 'error404');

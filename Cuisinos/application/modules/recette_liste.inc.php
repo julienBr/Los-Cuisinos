@@ -47,6 +47,6 @@
 			$i++;
 		}
 		
-		 $smarty->assign("data", $data);
+		$smarty->assign("data", $data);
 	}
 ?>

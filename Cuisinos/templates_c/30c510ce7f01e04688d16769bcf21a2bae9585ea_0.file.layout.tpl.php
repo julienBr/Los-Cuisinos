@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-14 16:45:05
+/* Smarty version 3.1.30, created on 2017-12-15 08:04:06
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\layout.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a32aa919ecc10_69811365',
+  'unifunc' => 'content_5a3381f6440ad4_53771604',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30c510ce7f01e04688d16769bcf21a2bae9585ea' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\layout.tpl',
-      1 => 1513269903,
+      1 => 1513324994,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:application/views/layout/layout_pied.inc.tpl' => 1,
   ),
 ),false)) {
-function content_5a32aa919ecc10_69811365 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3381f6440ad4_53771604 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -65,7 +65,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 >
 
 		<title><?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_218965a32aa919d2111_06775206', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_214375a3381f64326c7_36501778', 'title');
 ?>
 </title>
 	</head>
@@ -81,31 +81,10 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_218965a32aa919d211
 	<body>
 		<div class="container-fluid">
 			<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_28495a32aa919e4da3_02278763', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_280825a3381f643c914_32739123', 'body');
 ?>
 
 		</div>
-		<!--<?php echo '<script'; ?>
- type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/piexif.min.js"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/sortable.min.js"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/purify.min.js"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/fileinput.min.js"><?php echo '</script'; ?>
->-->
 		<?php echo '<script'; ?>
  type="text/javascript" src="https://use.fontawesome.com/babf69eb57.js"><?php echo '</script'; ?>
 >
@@ -120,7 +99,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_28495a32aa919e4da3
 	</footer>
 </html><?php }
 /* {block 'title'} */
-class Block_218965a32aa919d2111_06775206 extends Smarty_Internal_Block
+class Block_214375a3381f64326c7_36501778 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -129,7 +108,7 @@ Los Cuisinos<?php
 }
 /* {/block 'title'} */
 /* {block 'body'} */
-class Block_28495a32aa919e4da3_02278763 extends Smarty_Internal_Block
+class Block_280825a3381f643c914_32739123 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
