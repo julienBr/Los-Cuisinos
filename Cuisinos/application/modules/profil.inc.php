@@ -1,4 +1,4 @@
 <?php
-$data['user'] = array('nom' => 'bringard', 'prenom' => 'julien');
-$smarty -> assign("data", $data);
+/*$data['user'] = array('nom' => 'bringard', 'prenom' => 'julien');
+$smarty -> assign("data", $data);*/
 ?>

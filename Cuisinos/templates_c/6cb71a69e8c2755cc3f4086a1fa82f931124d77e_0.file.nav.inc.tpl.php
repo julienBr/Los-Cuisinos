@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-16 16:43:41
+/* Smarty version 3.1.30, created on 2017-12-16 17:27:22
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\nav\nav.inc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a354d3d2b13c6_82090372',
+  'unifunc' => 'content_5a35577a8b84a0_69188145',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6cb71a69e8c2755cc3f4086a1fa82f931124d77e' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\nav\\nav.inc.tpl',
-      1 => 1513442598,
+      1 => 1513445198,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a354d3d2b13c6_82090372 (Smarty_Internal_Template $_smarty_tpl) {
-?>
+function content_5a35577a8b84a0_69188145 (Smarty_Internal_Template $_smarty_tpl) {
+echo '<?php
+
+';
+echo '?>';?>
+
+
+
 <div class="row">
 	<nav class="col-sm-12 navbar-light bg-light">
 		<div class="row">
@@ -40,8 +46,10 @@ function content_5a354d3d2b13c6_82090372 (Smarty_Internal_Template $_smarty_tpl)
 					</form>
 					<ul class="col-sm btn-group" role="group">
 						<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=inscription'"><i class="fa fa-user-circle-o"></i> S'inscrire</button>
-						<button type="submit" class="btn btn-secondary" name="signOut"><i class="fa fa-sign-out"></i> Se déconnecter</button>
-						<!--<li class="dropdown"><a href="#" class="seConnecter btn btn-secondary" data-toggle="dropdown"><i class="fa fa-sign-in"></i> Se connecter</a>
+						<!--<form method="post">
+							<button type="submit" class="btn btn-secondary" name="signOut"><i class="fa fa-sign-out"></i> Se déconnecter</button>
+						</form>-->
+						<li class="dropdown"><a href="#" class="seConnecter btn btn-secondary" data-toggle="dropdown"><i class="fa fa-sign-in"></i> Se connecter</a>
 							<ul id="login-dp" class="dropdown-menu">
 								<li>
 									<div class="divLogin row">
@@ -61,7 +69,7 @@ function content_5a354d3d2b13c6_82090372 (Smarty_Internal_Template $_smarty_tpl)
 												</div>
 												<button name="signIn" type="submit" class="btnSignIn btn btn-primary btn-block">Sign in</button>
 												<div class="checkbox">
-													<label><input type="checkbox"> Se souvenir de moi</label>
+													<label for="remember"><input name="remember" type="checkbox" id="remember"> Se souvenir de moi</label>
 												</div>
 											</form>
 											<p class="nouveauIci">Nouveau ici ? <a href="#"><b>Rejoins nous</b></a></p>
@@ -69,7 +77,7 @@ function content_5a354d3d2b13c6_82090372 (Smarty_Internal_Template $_smarty_tpl)
 									</div>
 								</li>
 							</ul>
-						</li>-->
+						</li>
 					</ul>
 				</div>
 			</div>

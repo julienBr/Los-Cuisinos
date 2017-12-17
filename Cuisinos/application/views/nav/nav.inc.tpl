@@ -1,3 +1,9 @@
+<?php
+
+?>
+
+
+
 <div class="row">
 	<nav class="col-sm-12 navbar-light bg-light">
 		<div class="row">
@@ -16,8 +22,10 @@
 					</form>
 					<ul class="col-sm btn-group" role="group">
 						<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=inscription'"><i class="fa fa-user-circle-o"></i> S'inscrire</button>
-						<button type="submit" class="btn btn-secondary" name="signOut"><i class="fa fa-sign-out"></i> Se déconnecter</button>
-						<!--<li class="dropdown"><a href="#" class="seConnecter btn btn-secondary" data-toggle="dropdown"><i class="fa fa-sign-in"></i> Se connecter</a>
+						<!--<form method="post">
+							<button type="submit" class="btn btn-secondary" name="signOut"><i class="fa fa-sign-out"></i> Se déconnecter</button>
+						</form>-->
+						<li class="dropdown"><a href="#" class="seConnecter btn btn-secondary" data-toggle="dropdown"><i class="fa fa-sign-in"></i> Se connecter</a>
 							<ul id="login-dp" class="dropdown-menu">
 								<li>
 									<div class="divLogin row">
@@ -37,7 +45,7 @@
 												</div>
 												<button name="signIn" type="submit" class="btnSignIn btn btn-primary btn-block">Sign in</button>
 												<div class="checkbox">
-													<label><input type="checkbox"> Se souvenir de moi</label>
+													<label for="remember"><input name="remember" type="checkbox" id="remember"> Se souvenir de moi</label>
 												</div>
 											</form>
 											<p class="nouveauIci">Nouveau ici ? <a href="#"><b>Rejoins nous</b></a></p>
@@ -45,7 +53,7 @@
 									</div>
 								</li>
 							</ul>
-						</li>-->
+						</li>
 					</ul>
 				</div>
 			</div>

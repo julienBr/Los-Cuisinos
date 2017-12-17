@@ -4,6 +4,9 @@ if(isset ($_REQUEST['signIn'])) {
 	$pass = hash('sha1',$_REQUEST['signInPassword']);
 	$connect = $PDO_BDD->query("SELECT * FROM t_utilisateur_uti WHERE UTI_LOGIN LIKE '$login' AND UTI_PASS LIKE '$pass'")->fetchAll();
 	if(count($connect) == 1) {
+		/*if(isset($_REQUEST['remember'])) {
+			setcookie(name);
+		}*/
 		session_start();
 		$req = $PDO_BDD->query("SELECT UTI_ADMIN FROM t_utilisateur_uti WHERE UTI_LOGIN LIKE '$login' AND UTI_PASS LIKE '$pass'");
 		$typeUser = $req->fetch();
