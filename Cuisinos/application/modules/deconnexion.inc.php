@@ -1,8 +1,10 @@
 <?php
+$data['deconnexionReussie'] = '';
 if(isset($_REQUEST['signOut'])) {
-	$_SESSION=array();
+	session_start();
+	$_SESSION[] = array();
 	session_destroy();
-	header('location: index.php?page=accueil');
-	exit;
+	$data['deconnexionReussie'] = 1;
+	$smarty->assign("data", $data);
 }
 ?>

@@ -3,7 +3,7 @@
 	<div class="row">
 		{foreach $data['recetteCat'] as $data}
 			<div class="col-sm card" style="width: 20rem;">
-				<p class="text-center"><img class="card-img-top-cat" src="./media/categories/{$data.CAT_ILLUSTRATION}" alt="Card image categories"></p>
+				<p class="text-center"><img class="img-thumbnail card-img-top-cat" src="./media/categories/{$data.CAT_ILLUSTRATION}" alt="Card image categories"></p>
 				<div class="card-body">
 					<h4 class="card-title">{$data.CAT_LABEL}</h4>
 					<p class="card-text"><i>{$data.CAT_DESCRIPTION}</i></p>

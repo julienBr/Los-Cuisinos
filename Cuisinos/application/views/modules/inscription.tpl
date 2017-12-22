@@ -80,7 +80,7 @@
 							<div class="col-lg-12">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-input form-control" name="confirmation" oninput="check(this)" placeholder="Entrer votre Mot de passe" required>
+									<input type="password" class="form-input form-control" name="confirmation" placeholder="Entrer votre Mot de passe" required>
 								</div>
 							</div>
 						</div>
@@ -89,8 +89,8 @@
 				<div class="form-group">
 					<hr>
 					<div class="text-right">
-						<button name="submit" type="submit" class="btn-inscription btn btn-primary">Je m'inscris</button>
-						<button type="reset" class="btn-inscription btn btn-primary">Effacer</button>
+						<button name="btnInscription" type="submit" class="btn-inscription btn btn-primary"><i class="fa fa-check"></i> Je m'inscris</button>
+						<button type="reset" class="btn-inscription btn btn-primary"><i class="fa fa-eraser"></i> Effacer</button>
 					</div>
 				</div>
 			</div>
@@ -98,32 +98,66 @@
 	</form>
 	<div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>
 	 
+	{if $data['loginExist'] == '1'}
+		<script>alertify.warning('Ce login existe déjà..');</script>
+	{elseif $data['isUploadedFile'] == '1'}
+		<script>alertify.error('Fichier introuvable.');</script>
+	{elseif $data['moveUploadedFile'] == '1'}
+		<script>alertify.error('Impossible de copier le fichier.');</script>
+	{elseif $data['inscriptionReussie'] == '1'}
+		<script>
+			alertify.confirm().set('message', '<p>Inscription réussie</p><br/><a href="index.php?page=accueil">Accueil</a>').show();
+		</script>
+	{/if}
+
 	<!-- the fileinput plugin initialization -->
 	{literal}
 	<script>
-		function check(input) {
-			if(input.value != document.getElementById('pwd').value)
-				input.setCustomValidity('Les deux mots de passe doivent correspondre.');
-			else input.setCustomValidity('');
-		};
-
-		var btnCust = '<button type="button" class="btn btn-secondary" title="Add picture tags" ' + 'onclick="alert(\'Call your custom code here.\')">' +
-						  '<i class="fa fa-tags"></i>' + '</button>'; 
 		$("#avatar-1").fileinput({
 			overwriteInitial: true,
 			maxFileSize: 1500,
 			showClose: false,
 			showCaption: false,
-			browseLabel: '',
-			removeLabel: '',
+			browseLabel: 'Ouvrir',
 			browseIcon: '<i class="fa fa-folder-open-o"></i>',
-			removeIcon: '<i class="fa fa-remove"></i>',
-			removeTitle: 'Cancel or reset changes',
+			msgZoomModalHeading: 'Vue détaillée',
 			elErrorContainer: '#kv-avatar-errors-1',
 			msgErrorClass: 'alert alert-block alert-danger',
 			defaultPreviewContent: '<img src="asset/images/defaultAvatar.png" alt="Your Avatar">',
-			layoutTemplates: {main2: '{preview} ' +  btnCust + ' {remove} {browse}'},
+			layoutTemplates: {main2: '{preview} {browse}'},
 			allowedFileExtensions: ["jpg", "png", "gif"]
+			/*showRemove: true,
+			showUpload: true,
+			showDownload: true,
+			showZoom: true,
+			showDrag: true,
+			removeIcon: '<i class="glyphicon glyphicon-trash"></i>',
+			removeClass: 'btn btn-kv btn-default btn-outline-secondary',
+			removeErrorClass: 'btn btn-kv btn-danger',
+			removeTitle: 'Remove file',
+			uploadIcon: '<i class="glyphicon glyphicon-upload"></i>',
+			uploadClass: 'btn btn-kv btn-default btn-outline-secondary',
+			uploadTitle: 'Upload file',
+			uploadRetryIcon: '<i class="glyphicon glyphicon-repeat"></i>',
+			uploadRetryTitle: 'Retry upload',
+			downloadIcon: '<i class="glyphicon glyphicon-download"></i>',
+			downloadClass: 'btn btn-kv btn-default btn-outline-secondary',
+			downloadTitle: 'Download file',
+			zoomIcon: '<i class="glyphicon glyphicon-zoom-in"></i>',
+			zoomClass: 'btn btn-kv btn-default btn-outline-secondary',
+			zoomTitle: 'View Details',
+			dragIcon: '<i class="glyphicon glyphicon-move"></i>',
+			dragClass: 'text-info',
+			dragTitle: 'Move / Rearrange',
+			dragSettings: {},
+			indicatorNew: '<i class="glyphicon glyphicon-plus-sign text-warning"></i>',
+			indicatorSuccess: '<i class="glyphicon glyphicon-ok-sign text-success"></i>',
+			indicatorError: '<i class="glyphicon glyphicon-exclamation-sign text-danger"></i>',
+			indicatorLoading: '<i class="glyphicon glyphicon-hourglass text-muted"></i>',
+			indicatorNewTitle: 'Not uploaded yet',
+			indicatorSuccessTitle: 'Uploaded',
+			indicatorErrorTitle: 'Upload Error',
+			indicatorLoadingTitle: 'Uploading ...'*/
 		});
 	</script>
 	{/literal}

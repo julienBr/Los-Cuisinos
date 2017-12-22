@@ -1,29 +1,30 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-16 16:32:04
+/* Smarty version 3.1.30, created on 2017-12-19 21:32:52
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\layout.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a354a8452b300_76400138',
+  'unifunc' => 'content_5a398584e8ce61_80040572',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30c510ce7f01e04688d16769bcf21a2bae9585ea' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\layout.tpl',
-      1 => 1513441892,
+      1 => 1513719160,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:application/views/nav/nav_membre.inc.tpl' => 2,
+    'file:application/views/nav/nav_membre.inc.tpl' => 1,
+    'file:application/views/nav/nav_admin.inc.tpl' => 1,
     'file:application/views/nav/nav.inc.tpl' => 1,
     'file:application/views/layout/layout_pied.inc.tpl' => 1,
   ),
 ),false)) {
-function content_5a354a8452b300_76400138 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a398584e8ce61_80040572 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -38,47 +39,51 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 		<meta name="keywords"              content="Programmation, Informatique, projetPHP">
 
 		<link rel="stylesheet" type="text/css" href="asset/css/style.css">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/css/fileinput.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="asset/css/fileinput.css">
 		<?php echo '<script'; ?>
- src="https://code.jquery.com/jquery-3.2.1.min.js"><?php echo '</script'; ?>
+ src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 		<?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/piexif.min.js" type="text/javascript"><?php echo '</script'; ?>
+ type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/piexif.min.js"><?php echo '</script'; ?>
 >
 		<?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/sortable.min.js" type="text/javascript"><?php echo '</script'; ?>
+ type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/sortable.min.js"><?php echo '</script'; ?>
 >
 		<?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/purify.min.js" type="text/javascript"><?php echo '</script'; ?>
+ type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/plugins/purify.min.js"><?php echo '</script'; ?>
 >
 		<?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"><?php echo '</script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 		<?php echo '<script'; ?>
- src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" type="text/javascript"><?php echo '</script'; ?>
+ src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"><?php echo '</script'; ?>
 >
 		<?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/fileinput.min.js"><?php echo '</script'; ?>
+ type="text/javascript" src="asset/js/fileinput.js"><?php echo '</script'; ?>
 >
 		<?php echo '<script'; ?>
- src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.5/js/locales/LANG.js"><?php echo '</script'; ?>
+ type="text/javascript" src="https://use.fontawesome.com/babf69eb57.js"><?php echo '</script'; ?>
 >
-
+		<?php echo '<script'; ?>
+ type="text/javascript" src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"><?php echo '</script'; ?>
+>
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/alertify.min.css">
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/themes/default.min.css">
 		<title><?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_267975a354a844ff6d3_60917352', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_261765a398584e4e8d5_79221258', 'title');
 ?>
 </title>
 	</head>
 
 	<header>
 		<div class="container-fluid">
-			<?php if (isset($_SESSION['login']) && ($_SESSION['type'] == 0)) {?>
+			<?php if (isset($_SESSION['login']) && ($_SESSION['typeUser'] == 0)) {?>
 				<?php $_smarty_tpl->_subTemplateRender("file:application/views/nav/nav_membre.inc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-			<?php } elseif (isset($_SESSION['login']) && ($_SESSION['type'] == 1)) {?>
-				<?php $_smarty_tpl->_subTemplateRender("file:application/views/nav/nav_membre.inc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+			<?php } elseif (isset($_SESSION['login']) && ($_SESSION['typeUser'] == 1)) {?>
+				<?php $_smarty_tpl->_subTemplateRender("file:application/views/nav/nav_admin.inc.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 			<?php } else { ?>
@@ -92,13 +97,23 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_267975a354a844ff6d
 	<body>
 		<div class="container-fluid">
 			<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_306905a354a845271f4_82493620', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_147135a398584e78f04_49907037', 'body');
 ?>
 
-		</div>
-		<?php echo '<script'; ?>
- type="text/javascript" src="https://use.fontawesome.com/babf69eb57.js"><?php echo '</script'; ?>
+			<?php if ($_smarty_tpl->tpl_vars['data']->value['connexionReussie'] == '1') {?>
+				<?php echo '<script'; ?>
+>alertify.success('Connexion réussie.');<?php echo '</script'; ?>
 >
+			<?php } elseif ($_smarty_tpl->tpl_vars['data']->value['connexionReussie'] == '0') {?>
+				<?php echo '<script'; ?>
+>alertify.error('Erreur de connection : identifiant ou mot de passe érroné.');<?php echo '</script'; ?>
+>
+			<?php } elseif ($_smarty_tpl->tpl_vars['data']->value['deconnexionReussie'] == '1') {?>
+				<?php echo '<script'; ?>
+>alertify.success('A Bientot !');<?php echo '</script'; ?>
+>
+			<?php }?>
+		</div>
 	</body>
 
 	<footer class="footer">
@@ -110,7 +125,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_306905a354a845271f
 	</footer>
 </html><?php }
 /* {block 'title'} */
-class Block_267975a354a844ff6d3_60917352 extends Smarty_Internal_Block
+class Block_261765a398584e4e8d5_79221258 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -119,7 +134,7 @@ Los Cuisinos<?php
 }
 /* {/block 'title'} */
 /* {block 'body'} */
-class Block_306905a354a845271f4_82493620 extends Smarty_Internal_Block
+class Block_147135a398584e78f04_49907037 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }

@@ -1,8 +1,8 @@
 {extends "..\layout.tpl"}
 {block name=body}
-	<article>
+	<!--<article>
 		{foreach $data['alea'] as $alea}
 			<p>{$alea}</p>
 		{/foreach}
-	</article>
+	</article>-->
 {/block}

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-10 18:05:32
+/* Smarty version 3.1.30, created on 2017-12-19 21:44:43
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\recette.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a2d776c0c5f94_58741309',
+  'unifunc' => 'content_5a39884b633345_79908716',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dca232aa67f754300dd67d6ec48f6a2cf4646abe' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\recette.tpl',
-      1 => 1512929129,
+      1 => 1513719878,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a2d776c0c5f94_58741309 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a39884b633345_79908716 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_253955a2d776c0c44a4_03036549', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_80295a39884b630d67_29101856', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_253955a2d776c0c44a4_03036549 extends Smarty_Internal_Block
+class Block_80295a39884b630d67_29101856 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -44,7 +44,7 @@ if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['data']->value) {
 ?>
 			<div class="col-sm card" style="width: 20rem;">
-				<p class="text-center"><img class="card-img-top-cat" src="./media/categories/<?php echo $_smarty_tpl->tpl_vars['data']->value['CAT_ILLUSTRATION'];?>
+				<p class="text-center"><img class="img-thumbnail card-img-top-cat" src="./media/categories/<?php echo $_smarty_tpl->tpl_vars['data']->value['CAT_ILLUSTRATION'];?>
 " alt="Card image categories"></p>
 				<div class="card-body">
 					<h4 class="card-title"><?php echo $_smarty_tpl->tpl_vars['data']->value['CAT_LABEL'];?>

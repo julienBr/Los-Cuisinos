@@ -1,24 +1,23 @@
 <?php
-if(isset ($_REQUEST['signIn'])) {
+$data['connexionReussie'] = '';
+if(isset($_REQUEST['signIn'])) {
 	$login = $_REQUEST['signInLogin'];
-	$pass = hash('sha1',$_REQUEST['signInPassword']);
-	$connect = $PDO_BDD->query("SELECT * FROM t_utilisateur_uti WHERE UTI_LOGIN LIKE '$login' AND UTI_PASS LIKE '$pass'")->fetchAll();
+	$password = sha1($_REQUEST['signInPassword']);
+	$connect = $PDO_BDD -> query("SELECT *
+								  FROM t_utilisateur_uti
+								  WHERE UTI_LOGIN like '$login' AND UTI_PASS like '$password'") -> fetchAll();
 	if(count($connect) == 1) {
-		/*if(isset($_REQUEST['remember'])) {
-			setcookie(name);
-		}*/
 		session_start();
-		$req = $PDO_BDD->query("SELECT UTI_ADMIN FROM t_utilisateur_uti WHERE UTI_LOGIN LIKE '$login' AND UTI_PASS LIKE '$pass'");
-		$typeUser = $req->fetch();
-		$_SESSION['signInLogin'] = $login;
-		$_SESSION['signInPassword'] = $pass;
-		$_SESSION['type'] = $typeUser['UTI_ADMIN'];
-		foreach($_SESSION as $cle => $valeur) {
-			echo "  <li><strong>".ucfirst($cle)." : </strong><em>".$valeur."</em></li>\n";
-		}
+		$data['connexionReussie'] = 1;
+		$typeUser = $PDO_BDD -> query("SELECT UTI_ADMIN
+									   FROM t_utilisateur_uti
+									   WHERE UTI_LOGIN LIKE '$login' AND UTI_PASS LIKE '$password'") -> fetch();
+		session_regenerate_id();
+		$_SESSION['login'] = $login;
+		$_SESSION['password'] = $password;
+		$_SESSION['typeUser'] = $typeUser['UTI_ADMIN'];
 	}
-	else {
-		echo "<script>alert(\"Erreur de connection : identifiant ou mot de passe érroné.\")</script>";  // renvois erreur à l'écran (pas besoin de move puisquil est déjà sur la page de co)
-	}
+	else $data['connexionReussie'] = 0;
+	$smarty->assign("data", $data);
 }
 ?>
