@@ -73,7 +73,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Julien Bringard** - *Chef de projet* - [julienBr](https://github.com/julienBr)
-* **Alexis Ducreux** - *Collaborateur* - [julienBr](https://github.com/neoguizmo)
+* **Alexis Ducreux** - *Collaborateur* - [neoguizmo](https://github.com/neoguizmo)
 
 Voir aussi la liste des [contributeurs](https://github.com/julienBr/Los-Cuisinos/graphs/contributors) qui ont participé à ce projet.
 
