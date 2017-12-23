@@ -203,6 +203,7 @@ ul ul {
 .dropdown-menu {
     background-color: #f8f9fa !important;
     border: 1px solid #8a969f !important;
+    transform: translate3d(-56px, 48px, 0px) !important;
 }
 
 .formDeco {
@@ -299,4 +300,8 @@ ul ul {
 
 #ajouterCommentaire {
     margin-top: 25px;
+}
+
+.buttonComment {
+    margin-top: 0 !important;
 }

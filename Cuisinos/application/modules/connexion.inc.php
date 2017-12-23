@@ -7,7 +7,7 @@ if(isset($_REQUEST['signIn'])) {
 								  FROM t_utilisateur_uti
 								  WHERE UTI_LOGIN like '$login' AND UTI_PASS like '$password'") -> fetchAll();
 	if(count($connect) == 1) {
-		session_start();
+		if(!isset($_SESSION)) session_start();
 		$data['connexionReussie'] = 1;
 		$typeUser = $PDO_BDD -> query("SELECT UTI_ADMIN
 									   FROM t_utilisateur_uti

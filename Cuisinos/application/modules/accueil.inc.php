@@ -16,6 +16,6 @@ $data['nbDesserts'] = $PDO_BDD -> query("SELECT COUNT(R.RCT_ID)
 																JOIN t_utilisateur_uti AS U ON U.UTI_ID = R.UTI_ID
 										WHERE CR.CAT_ID = 3") -> fetch()[0];
 
-$data['rctAlea'] = array(rand(0, 100), rand(0, 100), rand(0, 100));
+$data['rctAlea'] = array(rand(0, $data['nbEntrees']), rand(0, $data['nbPlats']), rand(0, $data['nbDesserts']));
 $smarty -> assign("data", $data);
 ?>

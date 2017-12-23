@@ -1,4 +1,5 @@
 <?php
+if(!isset($_SESSION)) session_start();
 define('DB_HOST', 'localhost'); // mysql-gullien.alwaysdata.net
 define('DB_PORT', '3306');
 define('DB_DATABASE', 'recette'); // gullien_recette

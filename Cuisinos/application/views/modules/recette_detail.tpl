@@ -46,64 +46,76 @@
 	<div class="row">
 		<hr class="col-sm-10">
 		<div class="col-sm-12">
-			<h3 class="titreComment col-sm-12">Laisser un Commentaires</h3>
+			<h3 class="titreComment col-sm-12">Laisser un Commentaire</h3>
 			<div class="zoneComment col-sm-10">
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
-					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#commentaires" role="tab">Commentaires</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#ajouterCommentaire" role="tab">Ajouter un commentaire</a>
-					</li>
+					{if $data['nbComm'] == 0}
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#commentaires" role="tab">Commentaires</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#ajouterCommentaire" role="tab">Ajouter un commentaire</a>
+						</li>
+					{else}
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#commentaires" role="tab">Commentaires</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#ajouterCommentaire" role="tab">Ajouter un commentaire</a>
+						</li>
+					{/if}
 				</ul>
 				<!-- Tab panes -->
 				<div class="tab-content">
-					<div class="tab-pane active" id="commentaires" role="tabpanel">
-						<table class="tabComment">
-							<tr>
-								<td class="col-sm-2">
-									<img class="imgProfilComment img-fluid" src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" alt="profile">
-								</td>
-								<td class="col-sm-9 comment">
-									<div class="row">
-										<h4 class="col-sm-3">Marco</h4>
-										<p style="text-align: right;" class="col-sm-3 offset-sm-6"><i>22.09.2014</i></p>
-										<p class="col-sm-12">Great snippet! Thanks for sharing.</p>
+					{if $data['nbComm'] == 0}
+						<div class="tab-pane" id="commentaires" role="tabpanel">
+					{else}
+						<div class="tab-pane active" id="commentaires" role="tabpanel">
+					{/if}
+							{foreach $data['listComments'] as $data}
+								<table class="tabComment">
+									<tr>
+										<td class="col-sm-2">
+											<img class="imgProfilComment img-fluid" src="./media/{$data['UTI_LOGIN']}/{$data['UTI_AVATAR']}" alt="{$data['UTI_AVATAR']}">
+										</td>
+										<td class="col-sm-10 comment">
+											<div class="row">
+												<h4 class="col-sm-3">{$data['UTI_LOGIN']}</h4>
+												<p style="text-align: right;" class="col-sm-3 offset-sm-6"><i>{$data['COM_DATE']}</i></p>
+												<p class="col-sm-12">{$data['COM_TEXTE']}</p>
+											</div>
+											<hr>
+										</td>
+									</tr>
+								</table>
+							{/foreach}
+						</div>
+					{if $data['nbComm'] == 0}
+						<div class="tab-pane active" id="ajouterCommentaire" role="tabpanel">
+					{else}
+						<div class="tab-pane" id="ajouterCommentaire" role="tabpanel">
+					{/if}
+							{if isset($smarty.session.login)}
+								<form action="#" method="post" class="form-horizontal" id="commentForm" role="form">
+									<div class="form-group row">
+										<label for="labelComment" class="col-sm-2 col-form-label">Commentaire</label>
+										<div class="col-sm-10">
+											<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+										</div>
 									</div>
-									<hr>
-								</td>
-							</tr>
-						</table>
-						<table class="tabComment">
-							<tr>
-								<td class="col-sm-2">
-									<img class="imgProfilComment img-fluid" src="https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg" alt="profile">
-								</td>
-								<td class="col-sm-9 comment">
-									<div class="row">
-										<h4 class="col-sm-3">Marco</h4>
-										<p style="text-align: right;" class="col-sm-3 offset-sm-6"><i>22.09.2014</i></p>
-										<p class="col-sm-12">Great snippet! Thanks for sharing.</p>
+									<div class="form-group">
+										<hr>
+										<div class="text-right">
+											<button name="btnCommentaire" type="submit" class="buttonComment btn-inscription btn btn-primary"><i class="fa fa-check"></i> Je m'inscris</button>
+											<button type="reset" class="buttonComment btn-inscription btn btn-primary"><i class="fa fa-eraser"></i> Effacer</button>
+										</div>
 									</div>
-									<hr>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<div class="tab-pane" id="ajouterCommentaire" role="tabpanel">
-						<form action="#" method="post" class="form-horizontal" id="commentForm" role="form">
-							<div class="form-group row">
-								<label for="labelComment" class="col-sm-2 col-form-label">Commentaire </label>
-								<div class="col-sm-10">
-									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="exampleFormControlTextarea1">Commentaires</label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-							</div>
-						</form>
+								</form>
+							{else}
+								<p><i>Veuillez vous connecter pour ajouter un commentaire</i></p>
+							{/if}
+						</div>
 					</div>
 				</div>
 			</div>

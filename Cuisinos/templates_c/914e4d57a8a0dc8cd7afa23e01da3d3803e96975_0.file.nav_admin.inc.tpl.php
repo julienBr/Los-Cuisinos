@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 18:44:27
+/* Smarty version 3.1.30, created on 2017-12-22 10:28:31
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\nav\nav_admin.inc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a380c8ba4f490_98444825',
+  'unifunc' => 'content_5a3cde4f0e23f4_27366276',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '914e4d57a8a0dc8cd7afa23e01da3d3803e96975' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\nav\\nav_admin.inc.tpl',
-      1 => 1513616359,
+      1 => 1513938496,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a380c8ba4f490_98444825 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3cde4f0e23f4_27366276 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
 	<nav class="col-sm-12 navbar-light bg-light">

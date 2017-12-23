@@ -1,5 +1,5 @@
 <?php
-session_start();
+if(!isset($_SESSION)) session_start();
 $idr=$_GET['idr'];
 if(isset($idr)) {
 	try {
@@ -69,14 +69,23 @@ if(isset($idr)) {
 		echo 'N° : '.$e -> getCode();
 	}
 	
-	if(isset($_SESSION['login'])) {
-		try {
-			$data['comm']=$PDO_BDD->query('SELECT COM_DATE, COM_TEXTE, UTI_LOGIN
-										   FROM t_commentaire_com AS C JOIN t_utilisateur_uti AS U ON C.UTI_ID=U.UTI_ID') -> fetch();
-		} catch(Exception $e) {
-			echo 'Erreur : '.$e -> getMessage().'</br>';
-			echo 'N° : '.$e -> getCode();
-		}
+	try {
+		$data['nbComm']=$PDO_BDD->query('SELECT count(COM_TEXTE)
+										 FROM t_commentaire_com
+										 WHERE RCT_ID = '.$idr)->fetch()[0];
+	}catch (Exception $e) {
+		echo 'Erreur : '.$e -> getMessage().'</br>';
+		echo 'N° : '.$e -> getCode();
+	}
+
+	try {
+		$data['listComments']=$PDO_BDD->query('SELECT COM_ID, COM_TEXTE, COM_DATE, U.UTI_LOGIN, U.UTI_AVATAR
+											   FROM t_recette_rct AS R JOIN t_commentaire_com AS C on R.RCT_ID = C.RCT_ID
+																	   JOIN t_utilisateur_uti as U on C.UTI_ID = U.UTI_ID
+											   WHERE R.RCT_ID = '.$idr)->fetchall();
+	}catch (Exception $e) {
+		echo 'Erreur : '.$e -> getMessage().'</br>';
+		echo 'N° : '.$e -> getCode();
 	}
 
 	$smarty->assign("data", $data);
