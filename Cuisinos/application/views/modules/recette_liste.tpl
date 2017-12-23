@@ -18,7 +18,7 @@
 				{if $data['RCT_STATUT'][$i] == 'finale'}
 					<p class="text-right">
 						<a href="index.php?page=recette_detail&idr={$data['RCT_ID'][$i]}" class="btn btn-primary">
-							<i class="fa fa-arrow-circle-right"></i> Voir les recettes</a></p>
+							<i class="fa fa-arrow-circle-right"></i> Voir la recette</a></p>
 				{elseif $data['RCT_STATUT'][$i] == 'soumise'}
 					<p class="text-right"><i>(En cours de validation)</i></p>
 				{else}

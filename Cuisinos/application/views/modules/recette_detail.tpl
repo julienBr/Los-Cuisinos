@@ -83,7 +83,7 @@
 											<div class="row">
 												<h4 class="col-sm-3">{$data['UTI_LOGIN']}</h4>
 												<p style="text-align: right;" class="col-sm-3 offset-sm-6"><i>{$data['COM_DATE']}</i></p>
-												<p class="col-sm-12">{$data['COM_TEXTE']}</p>
+												<p class="pComm col-sm-12"><i>{$data['COM_TEXTE']}</i></p>
 											</div>
 											<hr>
 										</td>

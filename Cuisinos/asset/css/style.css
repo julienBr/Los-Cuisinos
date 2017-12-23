@@ -269,9 +269,14 @@ ul ul {
     margin: 25px auto !important;
 }
 
+table {
+    border-collapse: separate !important;
+}
+
 .comment {
+    border: 2px solid #28a745;
+    border-radius: 15px !important;
     background-color: #f8f9fa;
-    border-radius: 15px;
 }
 
 .nav-link {
@@ -289,6 +294,7 @@ ul ul {
 
 .tabComment {
     margin-top: 25px;
+    width: 100%;
 }
 
 .buttonRep {
@@ -304,4 +310,8 @@ ul ul {
 
 .buttonComment {
     margin-top: 0 !important;
+}
+
+.pComm {
+    margin-left: 25px;
 }

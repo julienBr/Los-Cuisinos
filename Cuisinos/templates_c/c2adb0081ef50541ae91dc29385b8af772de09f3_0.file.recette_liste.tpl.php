@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-19 13:05:22
+/* Smarty version 3.1.30, created on 2017-12-23 11:28:30
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\recette_liste.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a390e92827433_27858151',
+  'unifunc' => 'content_5a3e3dde863ba1_87199792',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c2adb0081ef50541ae91dc29385b8af772de09f3' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\recette_liste.tpl',
-      1 => 1513688720,
+      1 => 1514028506,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a390e92827433_27858151 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3e3dde863ba1_87199792 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_262615a390e928258d8_69735743', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_137435a3e3dde861fc0_25015368', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_262615a390e928258d8_69735743 extends Smarty_Internal_Block
+class Block_137435a3e3dde861fc0_25015368 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -66,7 +66,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 					<p class="text-right">
 						<a href="index.php?page=recette_detail&idr=<?php echo $_smarty_tpl->tpl_vars['data']->value['RCT_ID'][$_smarty_tpl->tpl_vars['i']->value];?>
 " class="btn btn-primary">
-							<i class="fa fa-arrow-circle-right"></i> Voir les recettes</a></p>
+							<i class="fa fa-arrow-circle-right"></i> Voir la recette</a></p>
 				<?php } elseif ($_smarty_tpl->tpl_vars['data']->value['RCT_STATUT'][$_smarty_tpl->tpl_vars['i']->value] == 'soumise') {?>
 					<p class="text-right"><i>(En cours de validation)</i></p>
 				<?php } else { ?>
