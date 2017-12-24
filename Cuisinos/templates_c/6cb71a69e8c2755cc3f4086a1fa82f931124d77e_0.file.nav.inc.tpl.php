@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-17 14:17:27
+/* Smarty version 3.1.30, created on 2017-12-24 10:13:11
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\nav\nav.inc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a367c77001852_79245742',
+  'unifunc' => 'content_5a3f7db7626bc1_85344300',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6cb71a69e8c2755cc3f4086a1fa82f931124d77e' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\nav\\nav.inc.tpl',
-      1 => 1513520217,
+      1 => 1514110380,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a367c77001852_79245742 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3f7db7626bc1_85344300 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
 	<nav class="col-sm-12 navbar-light bg-light">
-		<div class="row">
+		<div class="row" id="top">
 			<a class="col-sm-2 navbar-brand" href="index.php?page=accueil">
 				<img src="asset/images/icon.png" width="40" height="40" class="icon" alt="icon.png"><span class="losCuisinos"><b>Los Cuisinos</b></span>
 			</a>

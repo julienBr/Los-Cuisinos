@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-23 11:28:30
+/* Smarty version 3.1.30, created on 2017-12-23 17:16:15
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\recette_liste.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3e3dde863ba1_87199792',
+  'unifunc' => 'content_5a3e8f5f3413f3_43183324',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c2adb0081ef50541ae91dc29385b8af772de09f3' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\recette_liste.tpl',
-      1 => 1514028506,
+      1 => 1514049360,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a3e3dde863ba1_87199792 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3e8f5f3413f3_43183324 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_137435a3e3dde861fc0_25015368', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_146635a3e8f5f33f867_79162464', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_137435a3e3dde861fc0_25015368 extends Smarty_Internal_Block
+class Block_146635a3e8f5f33f867_79162464 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -56,10 +56,10 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration == 1
 					</div>
 				</div>
 				<?php if (preg_match_all('/[^\s]/u',$_smarty_tpl->tpl_vars['data']->value['RCT_DESCRIPTION'][$_smarty_tpl->tpl_vars['i']->value], $tmp) > 125) {?>
-					<p class="card-text"><i><?php echo substr($_smarty_tpl->tpl_vars['data']->value['RCT_DESCRIPTION'][$_smarty_tpl->tpl_vars['i']->value],0,125);?>
+					<p class="card-text" style="text-align: justify;"><i><?php echo substr($_smarty_tpl->tpl_vars['data']->value['RCT_DESCRIPTION'][$_smarty_tpl->tpl_vars['i']->value],0,125);?>
 ...</i></p>
 				<?php } else { ?>
-					<p class="card-text"><i><?php echo $_smarty_tpl->tpl_vars['data']->value['RCT_DESCRIPTION'][$_smarty_tpl->tpl_vars['i']->value];?>
+					<p class="card-text" style="text-align: justify;"><i><?php echo $_smarty_tpl->tpl_vars['data']->value['RCT_DESCRIPTION'][$_smarty_tpl->tpl_vars['i']->value];?>
 </i></p>
 				<?php }?>
 				<?php if ($_smarty_tpl->tpl_vars['data']->value['RCT_STATUT'][$_smarty_tpl->tpl_vars['i']->value] == 'finale') {?>

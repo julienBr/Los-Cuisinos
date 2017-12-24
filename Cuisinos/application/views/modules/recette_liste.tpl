@@ -11,9 +11,9 @@
 					</div>
 				</div>
 				{if $data['RCT_DESCRIPTION'][$i]|count_characters > 125}
-					<p class="card-text"><i>{$data['RCT_DESCRIPTION'][$i]|substr:0:125}...</i></p>
+					<p class="card-text" style="text-align: justify;"><i>{$data['RCT_DESCRIPTION'][$i]|substr:0:125}...</i></p>
 				{else}
-					<p class="card-text"><i>{$data['RCT_DESCRIPTION'][$i]}</i></p>
+					<p class="card-text" style="text-align: justify;"><i>{$data['RCT_DESCRIPTION'][$i]}</i></p>
 				{/if}
 				{if $data['RCT_STATUT'][$i] == 'finale'}
 					<p class="text-right">
