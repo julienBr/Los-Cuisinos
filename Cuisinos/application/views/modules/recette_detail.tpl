@@ -86,6 +86,7 @@
 											<h4 class="col-sm-3">{$data['UTI_LOGIN']}</h4>
 											<p style="text-align: right;" class="col-sm-3 offset-sm-6"><i>{$data['COM_DATE']}</i></p>
 											<p class="pComm col-sm-12"><i>{$data['COM_TEXTE']}</i></p>
+											<button name="suppComment" type="submit" class="btn btn-primary"><i class="fa fa-remove"></i> Supprimer</button>
 										</div>
 										<hr>
 									</td>
@@ -103,13 +104,13 @@
 								<div class="form-group row">
 									<label for="labelComment" class="col-sm-2 col-form-label">Commentaire</label>
 									<div class="col-sm-10">
-										<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+										<textarea class="form-control" name="textCommentaire" rows="3"></textarea>
 									</div>
 								</div>
 								<div class="form-group">
 									<hr>
 									<div class="text-right">
-										<button name="btnCommentaire" type="submit" class="buttonComment btn-inscription btn btn-primary"><i class="fa fa-check"></i> Je m'inscris</button>
+										<button name="btnCommentaire" type="submit" class="buttonComment btn-inscription btn btn-primary"><i class="fa fa-check"></i> Valider</button>
 										<button type="reset" class="buttonComment btn-inscription btn btn-primary"><i class="fa fa-eraser"></i> Effacer</button>
 									</div>
 								</div>

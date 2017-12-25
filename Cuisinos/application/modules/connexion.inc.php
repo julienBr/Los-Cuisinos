@@ -9,11 +9,12 @@ if(isset($_REQUEST['signIn'])) {
 	if(count($connect) == 1) {
 		if(!isset($_SESSION)) session_start();
 		$data['connexionReussie'] = 1;
-		$typeUser = $PDO_BDD -> query("SELECT UTI_ADMIN
+		$typeUser = $PDO_BDD -> query("SELECT UTI_ADMIN, UTI_ID
 									   FROM t_utilisateur_uti
 									   WHERE UTI_LOGIN LIKE '$login' AND UTI_PASS LIKE '$password'") -> fetch();
 		session_regenerate_id();
 		$_SESSION['login'] = $login;
+		$_SESSION['utiId'] = $typeUser['UTI_ID'];
 		$_SESSION['password'] = $password;
 		$_SESSION['typeUser'] = $typeUser['UTI_ADMIN'];
 	}

@@ -88,5 +88,14 @@ if(isset($idr)) {
 		echo 'N° : '.$e -> getCode();
 	}
 
+	if(isset($_REQUEST['btnCommentaire'])) {
+		$commentaire = addslashes($_REQUEST['textCommentaire']);
+		$utiId = $_SESSION['utiId'];
+		$rctID = $idr;
+		$PDO_BDD -> exec("INSERT INTO t_commentaire_com (COM_TEXTE, UTI_ID, RCT_ID)
+								  VALUES ('".$commentaire."', '".$utiId."', '".$rctID."')");
+		header('Location: index.php?page=recette_detail&idr='.$idr);
+	}
+
 	$smarty->assign("data", $data);
 }

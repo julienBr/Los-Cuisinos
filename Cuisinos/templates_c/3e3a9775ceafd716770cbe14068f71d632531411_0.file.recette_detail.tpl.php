@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-24 10:15:02
+/* Smarty version 3.1.30, created on 2017-12-24 11:34:45
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\recette_detail.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3f7e26d3dde8_41378977',
+  'unifunc' => 'content_5a3f90d55114d4_23976668',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3e3a9775ceafd716770cbe14068f71d632531411' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\recette_detail.tpl',
-      1 => 1514110501,
+      1 => 1514115283,
       2 => 'file',
     ),
   ),
@@ -21,19 +21,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a3f7e26d3dde8_41378977 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a3f90d55114d4_23976668 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_103975a3f7e26d3ad21_75537891', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_159395a3f90d550d736_11412782', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_103975a3f7e26d3ad21_75537891 extends Smarty_Internal_Block
+class Block_159395a3f90d550d736_11412782 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -157,6 +157,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['data']->value) {
 </i></p>
 											<p class="pComm col-sm-12"><i><?php echo $_smarty_tpl->tpl_vars['data']->value['COM_TEXTE'];?>
 </i></p>
+											<button name="suppComment" type="submit" class="btn btn-primary"><i class="fa fa-remove"></i> Supprimer</button>
 										</div>
 										<hr>
 									</td>
@@ -179,13 +180,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 								<div class="form-group row">
 									<label for="labelComment" class="col-sm-2 col-form-label">Commentaire</label>
 									<div class="col-sm-10">
-										<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+										<textarea class="form-control" name="textCommentaire" rows="3"></textarea>
 									</div>
 								</div>
 								<div class="form-group">
 									<hr>
 									<div class="text-right">
-										<button name="btnCommentaire" type="submit" class="buttonComment btn-inscription btn btn-primary"><i class="fa fa-check"></i> Je m'inscris</button>
+										<button name="btnCommentaire" type="submit" class="buttonComment btn-inscription btn btn-primary"><i class="fa fa-check"></i> Valider</button>
 										<button type="reset" class="buttonComment btn-inscription btn btn-primary"><i class="fa fa-eraser"></i> Effacer</button>
 									</div>
 								</div>
