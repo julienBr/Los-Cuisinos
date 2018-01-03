@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-24 11:34:45
+/* Smarty version 3.1.30, created on 2018-01-03 16:03:48
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\recette_detail.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3f90d55114d4_23976668',
+  'unifunc' => 'content_5a4cfee4a68394_21313077',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3e3a9775ceafd716770cbe14068f71d632531411' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\recette_detail.tpl',
-      1 => 1514115283,
+      1 => 1514995427,
       2 => 'file',
     ),
   ),
@@ -21,19 +21,19 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a3f90d55114d4_23976668 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4cfee4a68394_21313077 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_159395a3f90d550d736_11412782', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_112325a4cfee4a5ec24_88328629', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_159395a3f90d550d736_11412782 extends Smarty_Internal_Block
+class Block_112325a4cfee4a5ec24_88328629 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -157,7 +157,13 @@ foreach ($_from as $_smarty_tpl->tpl_vars['data']->value) {
 </i></p>
 											<p class="pComm col-sm-12"><i><?php echo $_smarty_tpl->tpl_vars['data']->value['COM_TEXTE'];?>
 </i></p>
-											<button name="suppComment" type="submit" class="btn btn-primary"><i class="fa fa-remove"></i> Supprimer</button>
+											<?php if ($_smarty_tpl->tpl_vars['data']->value['UTI_LOGIN'] == $_SESSION['login']) {?>
+												<div class="text-right col-sm-12">
+													<a class="btn btn-primary" href="index.php?page=recette_detail&idr=<?php echo $_smarty_tpl->tpl_vars['data']->value['RCT_ID'];?>
+&suppComment=<?php echo $_smarty_tpl->tpl_vars['data']->value['COM_ID'];?>
+"><i class="fa fa-remove"></i> Supprimer</a>
+												</div>
+											<?php }?>
 										</div>
 										<hr>
 									</td>

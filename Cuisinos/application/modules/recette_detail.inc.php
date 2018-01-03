@@ -1,4 +1,16 @@
 <?php
+
+/*function suppComment($comId) {
+	try {
+		$PDO_BDD -> exec('DELETE FROM t_commentaire_com
+						  WHERE COM_ID = '.$comId.' AND RCT_ID IN (SELECT RCT_ID
+						  										   FROM t_recette_rct
+						  										   WHERE RCT_ID = '.$idr.')');
+	} catch(Exception $e) {
+		echo $e -> getMessage();
+	}		
+}*/
+
 if(!isset($_SESSION)) session_start();
 $idr=$_GET['idr'];
 if(isset($idr)) {
@@ -79,10 +91,11 @@ if(isset($idr)) {
 	}
 
 	try {
-		$data['listComments']=$PDO_BDD->query('SELECT COM_ID, COM_TEXTE, COM_DATE, U.UTI_LOGIN, U.UTI_AVATAR
+		$data['listComments']=$PDO_BDD->query('SELECT COM_ID, COM_TEXTE, COM_DATE, U.UTI_LOGIN, U.UTI_AVATAR, R.RCT_ID
 											   FROM t_recette_rct AS R JOIN t_commentaire_com AS C on R.RCT_ID = C.RCT_ID
 																	   JOIN t_utilisateur_uti as U on C.UTI_ID = U.UTI_ID
-											   WHERE R.RCT_ID = '.$idr)->fetchall();
+											   WHERE R.RCT_ID = '.$idr.'
+											   ORDER BY COM_DATE DESC')->fetchall();
 	}catch (Exception $e) {
 		echo 'Erreur : '.$e -> getMessage().'</br>';
 		echo 'N° : '.$e -> getCode();
@@ -93,9 +106,71 @@ if(isset($idr)) {
 		$utiId = $_SESSION['utiId'];
 		$rctID = $idr;
 		$PDO_BDD -> exec("INSERT INTO t_commentaire_com (COM_TEXTE, UTI_ID, RCT_ID)
-								  VALUES ('".$commentaire."', '".$utiId."', '".$rctID."')");
+						  VALUES ('".$commentaire."', '".$utiId."', '".$rctID."')");
 		header('Location: index.php?page=recette_detail&idr='.$idr);
 	}
+	
+	if(isset($_GET['suppComment'])) {
+		$suppComment=$_GET['suppComment'];
+		foreach($data['listComments'] as $data) {
+			if($suppComment == $data['COM_ID']) {
+				try {
+					$PDO_BDD -> exec('DELETE FROM t_commentaire_com
+									  WHERE COM_ID = '.$suppComment.' AND RCT_ID IN (SELECT RCT_ID
+									  									   FROM t_recette_rct
+									  									   WHERE RCT_ID = '.$idr.')');
+				} catch(Exception $e) {
+					echo $e -> getMessage();
+				}
+			}
+		}
+		header('Location: index.php?page=recette_detail&idr='.$idr);
+	}
+
+	//foreach($data['listComments'] as $comm) echo $comm['COM_ID'];
+
+	//if(isset($_REQUEST['suppComment'])) echo "bonjour";
+	//$suppComment = "suppComment";
+	//if($suppComment.$comment['COM_ID'] == $_REQUEST)
+	//if(isset($_REQUEST['suppComment10'])) var_dump($_REQUEST['suppComment10']);
+	/*$i=0;
+	while(isset($_REQUEST['suppComment'.$i])) {
+		try {
+			$PDO_BDD -> exec('DELETE FROM t_commentaire_com
+							  WHERE COM_ID = '.$i.' AND RCT_ID IN (SELECT RCT_ID
+							  									   FROM t_recette_rct
+							  									   WHERE RCT_ID = '.$idr.')');
+		} catch(Exception $e) {
+			echo $e -> getMessage();
+		}
+		$i++;
+	}*/
+
+	/*for($i=1; $i<=$data['nbComm']; $i++) {
+		if(isset($_REQUEST['suppComment'.$i])) {
+			try {
+				$PDO_BDD -> exec('DELETE FROM t_commentaire_com
+								  WHERE COM_ID = '.$i.' AND RCT_ID IN (SELECT RCT_ID
+								  									   FROM t_recette_rct
+								  									   WHERE RCT_ID = '.$idr.')');
+			} catch(Exception $e) {
+				echo $e -> getMessage();
+			}
+
+		}
+	}*/
+	/*foreach($comment as $i) {
+		$j[] = $i['COM_ID'];
+		var_dump($j);
+	}*/
+	//var_dump($j);
+	//if(isset($_REQUEST['suppComment']))
+		//echo $_REQUEST["suppComment$j"];
+		/*$comm = $PDO_BDD -> query('SELECT COM_ID, COM_TEXTE, COM_DATE, U.UTI_LOGIN, U.UTI_AVATAR
+											   FROM t_recette_rct AS R JOIN t_commentaire_com AS C on R.RCT_ID = C.RCT_ID
+																	   JOIN t_utilisateur_uti as U on C.UTI_ID = U.UTI_ID
+											   WHERE R.RCT_ID = '.$idr.' AND COM_TEXTE = '.addslashes($data['listComments']['COM_TEXTE'])) ->fetch()[0];
+		echo $comm;*/
 
 	$smarty->assign("data", $data);
 }

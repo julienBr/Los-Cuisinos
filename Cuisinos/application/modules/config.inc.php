@@ -14,7 +14,8 @@ $_PAGES = array(
     'gestion_recettes'=>'gestion_recettes',
     'gestion_utilisateurs'=>'gestion_utilisateurs',
     'gestion_ingredients'=>'gestion_ingredients',
-    'recherches' => 'recherches'
+    'recherches' => 'recherches',
+    'ajout_recette' => 'ajout_recette'
 );
 define('HOME_PAGE', 'accueil');
 define('ERROR_404', 'error404');

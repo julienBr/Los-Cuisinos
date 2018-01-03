@@ -86,7 +86,11 @@
 											<h4 class="col-sm-3">{$data['UTI_LOGIN']}</h4>
 											<p style="text-align: right;" class="col-sm-3 offset-sm-6"><i>{$data['COM_DATE']}</i></p>
 											<p class="pComm col-sm-12"><i>{$data['COM_TEXTE']}</i></p>
-											<button name="suppComment" type="submit" class="btn btn-primary"><i class="fa fa-remove"></i> Supprimer</button>
+											{if $data['UTI_LOGIN'] == $smarty.session.login}
+												<div class="text-right col-sm-12">
+													<a class="btn btn-primary" href="index.php?page=recette_detail&idr={$data['RCT_ID']}&suppComment={$data['COM_ID']}"><i class="fa fa-remove"></i> Supprimer</a>
+												</div>
+											{/if}
 										</div>
 										<hr>
 									</td>

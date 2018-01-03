@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-18 10:19:38
+/* Smarty version 3.1.30, created on 2018-01-03 16:32:31
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\nav\nav_membre.inc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a37963adce399_93746330',
+  'unifunc' => 'content_5a4d059fbb97a8_47488419',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '926d74327acc7f23211512ca252f77b1ac8d261a' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\nav\\nav_membre.inc.tpl',
-      1 => 1513520227,
+      1 => 1514997149,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a37963adce399_93746330 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4d059fbb97a8_47488419 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
 	<nav class="col-sm-12 navbar-light bg-light">
-		<div class="row">
+		<div class="row" id="top">
 			<a class="col-sm-2 navbar-brand" href="index.php?page=accueil">
 				<img src="asset/images/icon.png" width="40" height="40" class="icon" alt="icon.png"><span class="losCuisinos"><b>Los Cuisinos</b></span>
 			</a>
@@ -35,8 +35,8 @@ function content_5a37963adce399_93746330 (Smarty_Internal_Template $_smarty_tpl)
 			<div class="col-sm">
 				<div class="row">
 					<form method="post" class="col-sm-7 form-inline my-2 my-lg-0">
-						<input class="inputSearch form-control mr-sm-2" name="recherche" value="" type="search" placeholder="une recette, un ingrédient..." aria-label="Search">
-						<button name="rechercher" class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+						<input class="inputSearch form-control" name="recherche" value="" type="search" placeholder="une recette, un ingrédient..." aria-label="Search">
+						<button name="rechercher" class="btnSearch btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
 					</form>
 					<ul class="col-sm btn-group" role="group">
 						<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=inscription'"><i class="fa fa-user-circle-o"></i> S'inscrire</button>
