@@ -49,22 +49,22 @@
 	<hr class="col-sm-10">
 	<div class="col-sm-12">
 		<h3 class="titreComment col-sm-12">Laisser un Commentaire</h3>
-		<div class="zoneComment col-sm-10">
+		<div class="zone col-sm-10">
 			<!-- Nav tabs -->
 			<ul class="nav nav-tabs" role="tablist">
 				{if $data['nbComm'] == 0}
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#commentaires" role="tab">Commentaires</a>
+						<a class="nav-link" data-toggle="tab" href="#commentaires" role="tab"><i class="fa fa-comments"></i> Commentaires</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#ajouterCommentaire" role="tab">Ajouter un commentaire</a>
+						<a class="nav-link active" data-toggle="tab" href="#ajouterCommentaire" role="tab"><i class="fa fa-plus"></i> Ajouter un commentaire</a>
 					</li>
 				{else}
 					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#commentaires" role="tab">Commentaires</a>
+						<a class="nav-link active" data-toggle="tab" href="#commentaires" role="tab"><i class="fa fa-comments"></i> Commentaires</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#ajouterCommentaire" role="tab">Ajouter un commentaire</a>
+						<a class="nav-link" data-toggle="tab" href="#ajouterCommentaire" role="tab"><i class="fa fa-plus"></i> Ajouter un commentaire</a>
 					</li>
 				{/if}
 			</ul>

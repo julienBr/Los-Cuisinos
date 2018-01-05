@@ -274,7 +274,7 @@ ul ul {
     margin-bottom: 0;
 }
 
-.zoneComment {
+.zone {
     margin: 25px auto !important;
 }
 
@@ -327,4 +327,47 @@ table {
 
 .smoothScroll {
     margin-bottom: 26px !important;
+}
+
+.monCompte {
+    margin-top: 25px !important;
+}
+
+.imgProfil {
+    max-width: 250px !important;
+    padding-right: 0 !important;
+}
+
+.cardProfil {
+    border: 1px solid #8a969f !important;
+    background-color: #f8f9fa !important;
+}
+
+.card-block-profil {
+    padding-left: 0 !important;
+}
+
+.listItem {
+    position: relative;
+    display: block;
+    padding: .96rem 1.25rem;
+    margin-bottom: -1px;
+    border-bottom: 1px solid #28a745;
+}
+
+.borderNone {
+    border-bottom: 0 !important;
+}
+
+.listCard {
+    width: 818px;
+    padding-left: 0px !important;
+}
+
+.btnModProfil {
+    margin: 0 0 0 580px !important;
+}
+
+.imgModProfil {
+    max-width: 160px;
 }

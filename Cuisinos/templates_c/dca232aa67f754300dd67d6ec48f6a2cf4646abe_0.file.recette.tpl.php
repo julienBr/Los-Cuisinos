@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-19 21:44:43
+/* Smarty version 3.1.30, created on 2018-01-04 15:48:25
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\recette.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a39884b633345_79908716',
+  'unifunc' => 'content_5a4e4cc9ca5318_68795318',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dca232aa67f754300dd67d6ec48f6a2cf4646abe' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\recette.tpl',
-      1 => 1513719878,
+      1 => 1515080904,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a39884b633345_79908716 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4e4cc9ca5318_68795318 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_80295a39884b630d67_29101856', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_190995a4e4cc9ca0b97_51927263', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_80295a39884b630d67_29101856 extends Smarty_Internal_Block
+class Block_190995a4e4cc9ca0b97_51927263 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -52,7 +52,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['data']->value) {
 					<p class="card-text"><i><?php echo $_smarty_tpl->tpl_vars['data']->value['CAT_DESCRIPTION'];?>
 </i></p>
 					<a href="index.php?page=recette_liste&idc=<?php echo $_smarty_tpl->tpl_vars['data']->value['CAT_ID'];?>
-" class="btn-card btn btn-primary">Voir les recettes</a>
+" class="btn-card btn btn-primary"><i class="fa fa-arrow-circle-right"></i> Voir les recettes</a>
 				</div>
 			</div>
 		<?php

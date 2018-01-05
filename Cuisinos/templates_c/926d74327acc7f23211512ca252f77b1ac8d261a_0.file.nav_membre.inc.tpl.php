@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-03 16:32:31
+/* Smarty version 3.1.30, created on 2018-01-04 16:08:59
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\nav\nav_membre.inc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4d059fbb97a8_47488419',
+  'unifunc' => 'content_5a4e519b11c690_08869539',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '926d74327acc7f23211512ca252f77b1ac8d261a' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\nav\\nav_membre.inc.tpl',
-      1 => 1514997149,
+      1 => 1515082050,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a4d059fbb97a8_47488419 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4e519b11c690_08869539 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
 	<nav class="col-sm-12 navbar-light bg-light">
@@ -31,6 +31,8 @@ function content_5a4d059fbb97a8_47488419 (Smarty_Internal_Template $_smarty_tpl)
 			<div class="col-sm-3 btn-group" role="group">
 				<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=accueil'"><i class="fa fa-home"></i> Accueil</button>
 				<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=recette'"><i class="fa fa-cutlery"></i> Recettes</button>
+				<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=profil&idu=<?php echo $_SESSION['utiId'];?>
+'"><i class="fa fa-gear"></i> Mon compte</button>
 			</div>
 			<div class="col-sm">
 				<div class="row">

@@ -7,7 +7,7 @@
 				<div class="card-body">
 					<h4 class="card-title">{$data.CAT_LABEL}</h4>
 					<p class="card-text"><i>{$data.CAT_DESCRIPTION}</i></p>
-					<a href="index.php?page=recette_liste&idc={$data['CAT_ID']}" class="btn-card btn btn-primary">Voir les recettes</a>
+					<a href="index.php?page=recette_liste&idc={$data['CAT_ID']}" class="btn-card btn btn-primary"><i class="fa fa-arrow-circle-right"></i> Voir les recettes</a>
 				</div>
 			</div>
 		{/foreach}

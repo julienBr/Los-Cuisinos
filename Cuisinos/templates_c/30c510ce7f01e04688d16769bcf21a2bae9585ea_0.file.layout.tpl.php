@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-12-24 09:58:12
+/* Smarty version 3.1.30, created on 2018-01-03 16:38:39
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\layout.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a3f7a345de542_11541044',
+  'unifunc' => 'content_5a4d070f4ed2c8_66141436',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '30c510ce7f01e04688d16769bcf21a2bae9585ea' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\layout.tpl',
-      1 => 1514109428,
+      1 => 1514997442,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:application/views/layout/layout_pied.inc.tpl' => 1,
   ),
 ),false)) {
-function content_5a3f7a345de542_11541044 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a4d070f4ed2c8_66141436 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -71,7 +71,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/alertify.min.css">
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/themes/default.min.css">
 		<title><?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_271645a3f7a3457b189_08651485', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_180795a4d070f41ae48_63457216', 'title');
 ?>
 </title>
 	</head>
@@ -97,7 +97,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_271645a3f7a3457b18
 	<body>
 		<div class="container-fluid">
 			<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_261495a3f7a345bb0f4_94840228', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_132925a4d070f4a0577_38706942', 'body');
 ?>
 
 			<?php if ($_smarty_tpl->tpl_vars['data']->value['connexionReussie'] == '1') {?>
@@ -125,7 +125,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_261495a3f7a345bb0f
 	</footer>
 </html><?php }
 /* {block 'title'} */
-class Block_271645a3f7a3457b189_08651485 extends Smarty_Internal_Block
+class Block_180795a4d070f41ae48_63457216 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -134,7 +134,7 @@ Los Cuisinos<?php
 }
 /* {/block 'title'} */
 /* {block 'body'} */
-class Block_261495a3f7a345bb0f4_94840228 extends Smarty_Internal_Block
+class Block_132925a4d070f4a0577_38706942 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }

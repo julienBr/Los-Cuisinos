@@ -1,16 +1,4 @@
 <?php
-
-/*function suppComment($comId) {
-	try {
-		$PDO_BDD -> exec('DELETE FROM t_commentaire_com
-						  WHERE COM_ID = '.$comId.' AND RCT_ID IN (SELECT RCT_ID
-						  										   FROM t_recette_rct
-						  										   WHERE RCT_ID = '.$idr.')');
-	} catch(Exception $e) {
-		echo $e -> getMessage();
-	}		
-}*/
-
 if(!isset($_SESSION)) session_start();
 $idr=$_GET['idr'];
 if(isset($idr)) {

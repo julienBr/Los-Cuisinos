@@ -7,7 +7,7 @@
 			<div class="col-sm-3 btn-group" role="group">
 				<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=accueil'"><i class="fa fa-home"></i> Accueil</button>
 				<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=recette'"><i class="fa fa-cutlery"></i> Recettes</button>
-				<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=ajout_recette'"><i class="fa fa-plus"></i> Ajouter une recette</button>
+				<button type="button" class="btn btn-secondary" onclick="window.location.href='index.php?page=profil&idu={$smarty.session.utiId}'"><i class="fa fa-gear"></i> Mon compte</button>
 			</div>
 			<div class="col-sm">
 				<div class="row">
