@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-05 17:20:04
+/* Smarty version 3.1.30, created on 2018-01-07 15:45:44
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\modifier_profil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4fb3c4d71258_44717167',
+  'unifunc' => 'content_5a5240a8a06441_30509756',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0c90cdc2906972bfffba40f3b95539ceefedc319' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\modifier_profil.tpl',
-      1 => 1515172461,
+      1 => 1515258659,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a4fb3c4d71258_44717167 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a5240a8a06441_30509756 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_287005a4fb3c4d649c6_19818306', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_189375a5240a8a00f03_28214571', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_287005a4fb3c4d649c6_19818306 extends Smarty_Internal_Block
+class Block_189375a5240a8a00f03_28214571 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>

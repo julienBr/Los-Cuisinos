@@ -1,4 +1,5 @@
 <?php
+require 'private.inc.php';
 if(!isset($_SESSION)) session_start();
 
 $idu=$_GET['idu'];

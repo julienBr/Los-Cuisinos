@@ -371,3 +371,32 @@ table {
 .imgModProfil {
     max-width: 160px;
 }
+
+.listeRecette {
+    margin-top: 25px;
+}
+
+.tabRCT {
+    border-collapse: collapse !important;
+}
+
+.ajoutModSupp {
+    margin: 0 !important;
+}
+
+.divForm {
+    margin-top: 8px;
+}
+
+.btn-modRct {
+    margin: 15px 0 !important;
+}
+
+.addInput {
+    border-radius: 5px 0 0 5px !important;
+}
+
+.addAInput {
+    margin: 8px 0 0 0!important;
+    border-radius: 0 5px 5px 0 !important;
+}

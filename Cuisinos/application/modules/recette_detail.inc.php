@@ -11,7 +11,7 @@ if(isset($idr)) {
 														   join t_utilisateur_uti as U on R.UTI_ID = U.UTI_ID
 														   join t_unite_uni as UN on RIU.UNI_ID = UN.UNI_ID
 														   join t_ingredient_igd as I on RIU.IGD_ID = I.IGD_ID
-								where R.RCT_ID = '.$idr.' and R.RCT_STATUT = 3');
+								where R.RCT_ID = '.$idr);
 		$req->execute();
 	} catch (Exception $e) {
 		echo 'Erreur : '.$e -> getMessage().'</br>';
@@ -114,51 +114,6 @@ if(isset($idr)) {
 		}
 		header('Location: index.php?page=recette_detail&idr='.$idr);
 	}
-
-	//foreach($data['listComments'] as $comm) echo $comm['COM_ID'];
-
-	//if(isset($_REQUEST['suppComment'])) echo "bonjour";
-	//$suppComment = "suppComment";
-	//if($suppComment.$comment['COM_ID'] == $_REQUEST)
-	//if(isset($_REQUEST['suppComment10'])) var_dump($_REQUEST['suppComment10']);
-	/*$i=0;
-	while(isset($_REQUEST['suppComment'.$i])) {
-		try {
-			$PDO_BDD -> exec('DELETE FROM t_commentaire_com
-							  WHERE COM_ID = '.$i.' AND RCT_ID IN (SELECT RCT_ID
-							  									   FROM t_recette_rct
-							  									   WHERE RCT_ID = '.$idr.')');
-		} catch(Exception $e) {
-			echo $e -> getMessage();
-		}
-		$i++;
-	}*/
-
-	/*for($i=1; $i<=$data['nbComm']; $i++) {
-		if(isset($_REQUEST['suppComment'.$i])) {
-			try {
-				$PDO_BDD -> exec('DELETE FROM t_commentaire_com
-								  WHERE COM_ID = '.$i.' AND RCT_ID IN (SELECT RCT_ID
-								  									   FROM t_recette_rct
-								  									   WHERE RCT_ID = '.$idr.')');
-			} catch(Exception $e) {
-				echo $e -> getMessage();
-			}
-
-		}
-	}*/
-	/*foreach($comment as $i) {
-		$j[] = $i['COM_ID'];
-		var_dump($j);
-	}*/
-	//var_dump($j);
-	//if(isset($_REQUEST['suppComment']))
-		//echo $_REQUEST["suppComment$j"];
-		/*$comm = $PDO_BDD -> query('SELECT COM_ID, COM_TEXTE, COM_DATE, U.UTI_LOGIN, U.UTI_AVATAR
-											   FROM t_recette_rct AS R JOIN t_commentaire_com AS C on R.RCT_ID = C.RCT_ID
-																	   JOIN t_utilisateur_uti as U on C.UTI_ID = U.UTI_ID
-											   WHERE R.RCT_ID = '.$idr.' AND COM_TEXTE = '.addslashes($data['listComments']['COM_TEXTE'])) ->fetch()[0];
-		echo $comm;*/
 
 	$smarty->assign("data", $data);
 }

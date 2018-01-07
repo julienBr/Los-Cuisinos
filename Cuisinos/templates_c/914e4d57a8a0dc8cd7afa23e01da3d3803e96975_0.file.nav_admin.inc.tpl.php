@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-04 16:08:15
+/* Smarty version 3.1.30, created on 2018-01-07 14:48:19
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\nav\nav_admin.inc.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a4e516f63f7e3_99185849',
+  'unifunc' => 'content_5a523333ec2ef1_25961933',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5a4e516f63f7e3_99185849 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a523333ec2ef1_25961933 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row">
 	<nav class="col-sm-12 navbar-light bg-light">
