@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-01-08 01:26:15
+/* Smarty version 3.1.30, created on 2018-12-09 17:25:49
   from "C:\wamp64\www\siteCuisine\trunk\Cuisinos\application\views\modules\inscription.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a52c8b769f845_52724546',
+  'unifunc' => 'content_5c0d501d14f7c9_01969980',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0f700a9c8f75ceb98e682ce531e1491bb6fdd7d5' => 
     array (
       0 => 'C:\\wamp64\\www\\siteCuisine\\trunk\\Cuisinos\\application\\views\\modules\\inscription.tpl',
-      1 => 1514997750,
+      1 => 1544375115,
       2 => 'file',
     ),
   ),
@@ -21,18 +21,18 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout.tpl' => 1,
   ),
 ),false)) {
-function content_5a52c8b769f845_52724546 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c0d501d14f7c9_01969980 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_74675a52c8b769a169_09354873', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_246795c0d501d14da28_08338715', 'body');
 $_smarty_tpl->inheritance->endChild();
 $_smarty_tpl->_subTemplateRender("file:../layout.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 2, false);
 }
 /* {block 'body'} */
-class Block_74675a52c8b769a169_09354873 extends Smarty_Internal_Block
+class Block_246795c0d501d14da28_08338715 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -133,7 +133,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 			</div>
 		</div>
 	</form>
-	<div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>
+	<div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none;"></div>
 	 
 	<?php if ($_smarty_tpl->tpl_vars['data']->value['loginExist'] == '1') {?>
 		<?php echo '<script'; ?>

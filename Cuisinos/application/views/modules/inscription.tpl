@@ -96,7 +96,7 @@
 			</div>
 		</div>
 	</form>
-	<div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none"></div>
+	<div id="kv-avatar-errors-1" class="center-block" style="width:800px;display:none;"></div>
 	 
 	{if $data['loginExist'] == '1'}
 		<script>alertify.warning('Ce login existe déjà..');</script>
